@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bryan's special track warnt</title>
+	<style type="text/css">
+	html, body {
+		height: 100%;
+		width:100%;
+		min-width: 138px; /* 3 px times 46 miles */
+	}
+	body {
+		margin:0;
+	}
+	.mile {
+		border: 1px solid gray;
+		position:relative;
+		height:15px;
+		float:left;
+	}
+
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		// create the track
+		var canv = document.body;
+		for (var i = 60 - 1; i >= 14; i--) {
+			var r = document.createElement('div');
+			r.className = 'mile';
+			canv.appendChild(r);
+		};
+
+		// here's some data
+		var currentWarrants = [],
+			ii = 0;
+		for (var i = 60 - 1; i >= 14; i--) {
+			currentWarrants[ii] = Math.random()<.5;
+			ii++;
+		};
+
+		// quick set width to something sane
+		function getWidth() {
+			// 2px per box for border
+			// 46 boxes
+			var w = window.innerWidth;
+			w = w - (46*2);
+			w = w / 46;
+			if(w > 1) {
+				return w;
+			} else {
+				return 1;
+			}
+		}
+
+		function setWidth(width) {
+			if(window.bryan_divs) {
+				for (var i = window.bryan_divs.length - 1; i >= 0; i--) {
+					window.bryan_divs[i].style.width = width + 'px';
+				};
+			} else {
+				window.bryan_divs = document.getElementsByClassName('mile');
+				setWidth(width);
+			}
+		}
+
+		function doResize() {
+			setWidth(getWidth());
+		}
+
+		window.onresize = doResize;
+
+		doResize();
+
+		// append the data
+		d3.selectAll('div')
+			.data(currentWarrants)
+			.style('background-color', function(d) { 
+				if(d)
+					return 'red';
+				return 'green';
+			});
+	</script>
+</body>
+</html>

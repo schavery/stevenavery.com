@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>News</word>
+            <lemma>News</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>4</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>Online</word>
+            <lemma>Online</lemma>
+            <CharacterOffsetBegin>5</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>Today</word>
+            <lemma>Today</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>THIS P1D</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t1" type="DATE"/>
+          </token>
+          <token id="4">
+            <word>DRILLING</word>
+            <lemma>DRILLING</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>TECHNIQUE</word>
+            <lemma>TECHNIQUE</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>37</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>BANNED</word>
+            <lemma>BANNED</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>IN</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>TETHYS</word>
+            <lemma>TETHYS</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>54</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>1995/03/30</word>
+            <lemma>1995/03/30</lemma>
+            <CharacterOffsetBegin>60</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>1995-03-30</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t2" type="DATE">1995-03-30</Timex>
+          </token>
+          <token id="10">
+            <word>CENTRUM</word>
+            <lemma>CENTRUM</lemma>
+            <CharacterOffsetBegin>74</CharacterOffsetBegin>
+            <CharacterOffsetEnd>81</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>81</CharacterOffsetBegin>
+            <CharacterOffsetEnd>82</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>Tethys</word>
+            <lemma>Tethys</lemma>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>89</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>-</word>
+            <lemma>-</lemma>
+            <CharacterOffsetBegin>90</CharacterOffsetBegin>
+            <CharacterOffsetEnd>91</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>GAStech</word>
+            <lemma>GAStech</lemma>
+            <CharacterOffsetBegin>92</CharacterOffsetBegin>
+            <CharacterOffsetEnd>99</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>International</word>
+            <lemma>International</lemma>
+            <CharacterOffsetBegin>100</CharacterOffsetBegin>
+            <CharacterOffsetEnd>113</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>'s</word>
+            <lemma>'s</lemma>
+            <CharacterOffsetBegin>113</CharacterOffsetBegin>
+            <CharacterOffsetEnd>115</CharacterOffsetEnd>
+            <POS>POS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>Hyper</word>
+            <lemma>Hyper</lemma>
+            <CharacterOffsetBegin>116</CharacterOffsetBegin>
+            <CharacterOffsetEnd>121</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="18">
+            <word>Acidic</word>
+            <lemma>Acidic</lemma>
+            <CharacterOffsetBegin>122</CharacterOffsetBegin>
+            <CharacterOffsetEnd>128</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="19">
+            <word>Substrate</word>
+            <lemma>Substrate</lemma>
+            <CharacterOffsetBegin>129</CharacterOffsetBegin>
+            <CharacterOffsetEnd>138</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="20">
+            <word>Removal</word>
+            <lemma>removal</lemma>
+            <CharacterOffsetBegin>139</CharacterOffsetBegin>
+            <CharacterOffsetEnd>146</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="21">
+            <word>-LRB-</word>
+            <lemma>-lrb-</lemma>
+            <CharacterOffsetBegin>147</CharacterOffsetBegin>
+            <CharacterOffsetEnd>148</CharacterOffsetEnd>
+            <POS>-LRB-</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="22">
+            <word>HASR</word>
+            <lemma>hasr</lemma>
+            <CharacterOffsetBegin>148</CharacterOffsetBegin>
+            <CharacterOffsetEnd>152</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="23">
+            <word>-RRB-</word>
+            <lemma>-rrb-</lemma>
+            <CharacterOffsetBegin>152</CharacterOffsetBegin>
+            <CharacterOffsetEnd>153</CharacterOffsetEnd>
+            <POS>-RRB-</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="24">
+            <word>has</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>154</CharacterOffsetBegin>
+            <CharacterOffsetEnd>157</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="25">
+            <word>officially</word>
+            <lemma>officially</lemma>
+            <CharacterOffsetBegin>158</CharacterOffsetBegin>
+            <CharacterOffsetEnd>168</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="26">
+            <word>been</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>169</CharacterOffsetBegin>
+            <CharacterOffsetEnd>173</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="27">
+            <word>banned</word>
+            <lemma>ban</lemma>
+            <CharacterOffsetBegin>174</CharacterOffsetBegin>
+            <CharacterOffsetEnd>180</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="28">
+            <word>by</word>
+            <lemma>by</lemma>
+            <CharacterOffsetBegin>181</CharacterOffsetBegin>
+            <CharacterOffsetEnd>183</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="29">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>184</CharacterOffsetBegin>
+            <CharacterOffsetEnd>187</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="30">
+            <word>Tethys</word>
+            <lemma>Tethys</lemma>
+            <CharacterOffsetBegin>188</CharacterOffsetBegin>
+            <CharacterOffsetEnd>194</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="31">
+            <word>government</word>
+            <lemma>government</lemma>
+            <CharacterOffsetBegin>195</CharacterOffsetBegin>
+            <CharacterOffsetEnd>205</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="32">
+            <word>due</word>
+            <lemma>due</lemma>
+            <CharacterOffsetBegin>206</CharacterOffsetBegin>
+            <CharacterOffsetEnd>209</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="33">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>210</CharacterOffsetBegin>
+            <CharacterOffsetEnd>212</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="34">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>213</CharacterOffsetBegin>
+            <CharacterOffsetEnd>216</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="35">
+            <word>high</word>
+            <lemma>high</lemma>
+            <CharacterOffsetBegin>217</CharacterOffsetBegin>
+            <CharacterOffsetEnd>221</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="36">
+            <word>probability</word>
+            <lemma>probability</lemma>
+            <CharacterOffsetBegin>222</CharacterOffsetBegin>
+            <CharacterOffsetEnd>233</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="37">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>234</CharacterOffsetBegin>
+            <CharacterOffsetEnd>236</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="38">
+            <word>water</word>
+            <lemma>water</lemma>
+            <CharacterOffsetBegin>237</CharacterOffsetBegin>
+            <CharacterOffsetEnd>242</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="39">
+            <word>contamination</word>
+            <lemma>contamination</lemma>
+            <CharacterOffsetBegin>243</CharacterOffsetBegin>
+            <CharacterOffsetEnd>256</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="40">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>256</CharacterOffsetBegin>
+            <CharacterOffsetEnd>257</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (NP (NP (NNP News) (NNP Online) (NNP Today) (NNP DRILLING) (NNP TECHNIQUE) (NNP BANNED)) (PP (IN IN) (NP (NNP TETHYS) (CD 1995/03/30) (NNP CENTRUM) (, ,) (NNP Tethys)))) (: -) (NP (NP (NNP GAStech) (NNP International) (POS 's)) (NNP Hyper) (NNP Acidic) (NNP Substrate) (NN Removal))) (PRN (-LRB- -LRB-) (NP (NN HASR)) (-RRB- -RRB-))) (VP (VBZ has) (ADVP (RB officially)) (VP (VBN been) (VP (VBN banned) (PP (IN by) (NP (DT the) (NNP Tethys) (NN government))) (PP (JJ due) (TO to) (NP (NP (DT the) (JJ high) (NN probability)) (PP (IN of) (NP (NN water) (NN contamination)))))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="27">banned</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="4">DRILLING</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="5">TECHNIQUE</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="27">banned</governor>
+            <dependent idx="6">BANNED</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="7">IN</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="8">TETHYS</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="9">1995/03/30</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="10">CENTRUM</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">IN</governor>
+            <dependent idx="12">Tethys</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">International</governor>
+            <dependent idx="14">GAStech</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="20">Removal</governor>
+            <dependent idx="15">International</dependent>
+          </dep>
+          <dep type="possessive">
+            <governor idx="15">International</governor>
+            <dependent idx="16">'s</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="17">Hyper</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="18">Acidic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="19">Substrate</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="20">Removal</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="22">HASR</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="27">banned</governor>
+            <dependent idx="24">has</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="27">banned</governor>
+            <dependent idx="25">officially</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="27">banned</governor>
+            <dependent idx="26">been</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="27">banned</governor>
+            <dependent idx="28">by</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="31">government</governor>
+            <dependent idx="29">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="31">government</governor>
+            <dependent idx="30">Tethys</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="28">by</governor>
+            <dependent idx="31">government</dependent>
+          </dep>
+          <dep type="mwe">
+            <governor idx="33">to</governor>
+            <dependent idx="32">due</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="27">banned</governor>
+            <dependent idx="33">to</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="36">probability</governor>
+            <dependent idx="34">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="36">probability</governor>
+            <dependent idx="35">high</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="33">to</governor>
+            <dependent idx="36">probability</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="36">probability</governor>
+            <dependent idx="37">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="39">contamination</governor>
+            <dependent idx="38">water</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="37">of</governor>
+            <dependent idx="39">contamination</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="27">banned</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="4">DRILLING</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="5">TECHNIQUE</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="27">banned</governor>
+            <dependent idx="6">BANNED</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="8">TETHYS</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="9">1995/03/30</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="10">CENTRUM</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="12">Tethys</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">International</governor>
+            <dependent idx="14">GAStech</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="20">Removal</governor>
+            <dependent idx="15">International</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="17">Hyper</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="18">Acidic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="19">Substrate</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="20">Removal</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="22">HASR</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="27">banned</governor>
+            <dependent idx="24">has</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="27">banned</governor>
+            <dependent idx="25">officially</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="27">banned</governor>
+            <dependent idx="26">been</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="31">government</governor>
+            <dependent idx="29">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="31">government</governor>
+            <dependent idx="30">Tethys</dependent>
+          </dep>
+          <dep type="agent">
+            <governor idx="27">banned</governor>
+            <dependent idx="31">government</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="36">probability</governor>
+            <dependent idx="34">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="36">probability</governor>
+            <dependent idx="35">high</dependent>
+          </dep>
+          <dep type="prep_due_to">
+            <governor idx="27">banned</governor>
+            <dependent idx="36">probability</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="39">contamination</governor>
+            <dependent idx="38">water</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="36">probability</governor>
+            <dependent idx="39">contamination</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="27">banned</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="4">DRILLING</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="5">TECHNIQUE</dependent>
+          </dep>
+          <dep type="nsubjpass">
+            <governor idx="27">banned</governor>
+            <dependent idx="6">BANNED</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="8">TETHYS</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="9">1995/03/30</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">Tethys</governor>
+            <dependent idx="10">CENTRUM</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="12">Tethys</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">International</governor>
+            <dependent idx="14">GAStech</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="20">Removal</governor>
+            <dependent idx="15">International</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="17">Hyper</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="18">Acidic</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">Removal</governor>
+            <dependent idx="19">Substrate</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="20">Removal</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="6">BANNED</governor>
+            <dependent idx="22">HASR</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="27">banned</governor>
+            <dependent idx="24">has</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="27">banned</governor>
+            <dependent idx="25">officially</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="27">banned</governor>
+            <dependent idx="26">been</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="31">government</governor>
+            <dependent idx="29">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="31">government</governor>
+            <dependent idx="30">Tethys</dependent>
+          </dep>
+          <dep type="agent">
+            <governor idx="27">banned</governor>
+            <dependent idx="31">government</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="36">probability</governor>
+            <dependent idx="34">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="36">probability</governor>
+            <dependent idx="35">high</dependent>
+          </dep>
+          <dep type="prep_due_to">
+            <governor idx="27">banned</governor>
+            <dependent idx="36">probability</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="39">contamination</governor>
+            <dependent idx="38">water</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="36">probability</governor>
+            <dependent idx="39">contamination</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

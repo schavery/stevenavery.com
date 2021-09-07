@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>News</word>
+            <lemma>News</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>4</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>Online</word>
+            <lemma>Online</lemma>
+            <CharacterOffsetBegin>5</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>Today</word>
+            <lemma>Today</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>THIS P1D</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t1" type="DATE"/>
+          </token>
+          <token id="4">
+            <word>ELODIS</word>
+            <lemma>ELODIS</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>PUBLIC</word>
+            <lemma>PUBLIC</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>HEALTH</word>
+            <lemma>HEALTH</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>FACT</word>
+            <lemma>FACT</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>SHEET</word>
+            <lemma>SHEET</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>2004</word>
+            <lemma>2004</lemma>
+            <CharacterOffsetBegin>51</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>2004-05-30</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t2" type="DATE">2004-05-30</Timex>
+          </token>
+          <token id="10">
+            <word>2004/05/30</word>
+            <lemma>2004/05/30</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>71</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>2004-05-30</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t2" type="DATE">2004-05-30</Timex>
+          </token>
+          <token id="11">
+            <word>ELODIS</word>
+            <lemma>elodi</lemma>
+            <CharacterOffsetBegin>75</CharacterOffsetBegin>
+            <CharacterOffsetEnd>81</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>81</CharacterOffsetBegin>
+            <CharacterOffsetEnd>82</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>Kronos</word>
+            <lemma>Kronos</lemma>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>89</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>-</word>
+            <lemma>-</lemma>
+            <CharacterOffsetBegin>90</CharacterOffsetBegin>
+            <CharacterOffsetEnd>91</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>The</word>
+            <lemma>The</lemma>
+            <CharacterOffsetBegin>92</CharacterOffsetBegin>
+            <CharacterOffsetEnd>95</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>Elodis</word>
+            <lemma>Elodis</lemma>
+            <CharacterOffsetBegin>96</CharacterOffsetBegin>
+            <CharacterOffsetEnd>102</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>Community</word>
+            <lemma>Community</lemma>
+            <CharacterOffsetBegin>103</CharacterOffsetBegin>
+            <CharacterOffsetEnd>112</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="18">
+            <word>Health</word>
+            <lemma>Health</lemma>
+            <CharacterOffsetBegin>113</CharacterOffsetBegin>
+            <CharacterOffsetEnd>119</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="19">
+            <word>Center</word>
+            <lemma>Center</lemma>
+            <CharacterOffsetBegin>120</CharacterOffsetBegin>
+            <CharacterOffsetEnd>126</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="20">
+            <word>has</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>127</CharacterOffsetBegin>
+            <CharacterOffsetEnd>130</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="21">
+            <word>published</word>
+            <lemma>publish</lemma>
+            <CharacterOffsetBegin>131</CharacterOffsetBegin>
+            <CharacterOffsetEnd>140</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="22">
+            <word>an</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>141</CharacterOffsetBegin>
+            <CharacterOffsetEnd>143</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="23">
+            <word>update</word>
+            <lemma>update</lemma>
+            <CharacterOffsetBegin>144</CharacterOffsetBegin>
+            <CharacterOffsetEnd>150</CharacterOffsetEnd>
+            <POS>VBP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="24">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>151</CharacterOffsetBegin>
+            <CharacterOffsetEnd>153</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="25">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>154</CharacterOffsetBegin>
+            <CharacterOffsetEnd>157</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="26">
+            <word>Wellness</word>
+            <lemma>Wellness</lemma>
+            <CharacterOffsetBegin>158</CharacterOffsetBegin>
+            <CharacterOffsetEnd>166</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="27">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>167</CharacterOffsetBegin>
+            <CharacterOffsetEnd>170</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="28">
+            <word>All</word>
+            <lemma>all</lemma>
+            <CharacterOffsetBegin>171</CharacterOffsetBegin>
+            <CharacterOffsetEnd>174</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>MISC</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="29">
+            <word>study</word>
+            <lemma>study</lemma>
+            <CharacterOffsetBegin>175</CharacterOffsetBegin>
+            <CharacterOffsetEnd>180</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="30">
+            <word>performed</word>
+            <lemma>perform</lemma>
+            <CharacterOffsetBegin>181</CharacterOffsetBegin>
+            <CharacterOffsetEnd>190</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="31">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>191</CharacterOffsetBegin>
+            <CharacterOffsetEnd>193</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="32">
+            <word>1998</word>
+            <lemma>1998</lemma>
+            <CharacterOffsetBegin>194</CharacterOffsetBegin>
+            <CharacterOffsetEnd>198</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>1998</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t3" type="DATE">1998</Timex>
+          </token>
+          <token id="33">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>198</CharacterOffsetBegin>
+            <CharacterOffsetEnd>199</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (NNP News) (NNP Online) (NNP Today) (NNP ELODIS) (NNP PUBLIC) (NNP HEALTH) (NNP FACT) (NNP SHEET) (CD 2004) (CD 2004/05/30) (NNS ELODIS)) (, ,) (NP (NP (NNP Kronos)) (: -) (NP (NNP The) (NNP Elodis) (NNP Community) (NNP Health) (NNP Center)))) (VP (VBZ has) (VP (VBN published) (SBAR (S (NP (DT an)) (VP (VBP update) (PP (TO to) (NP (DT the) (NNP Wellness))) (PP (IN for) (NP (NP (DT All) (NN study)) (VP (VBN performed) (PP (IN in) (NP (CD 1998))))))))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="21">published</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="4">ELODIS</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="5">PUBLIC</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="6">HEALTH</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="7">FACT</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="8">SHEET</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="9">2004</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="10">2004/05/30</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="21">published</governor>
+            <dependent idx="11">ELODIS</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="13">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="15">The</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="16">Elodis</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="17">Community</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="18">Health</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="13">Kronos</governor>
+            <dependent idx="19">Center</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="21">published</governor>
+            <dependent idx="20">has</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="23">update</governor>
+            <dependent idx="22">an</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="21">published</governor>
+            <dependent idx="23">update</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="23">update</governor>
+            <dependent idx="24">to</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="26">Wellness</governor>
+            <dependent idx="25">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="24">to</governor>
+            <dependent idx="26">Wellness</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="23">update</governor>
+            <dependent idx="27">for</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="29">study</governor>
+            <dependent idx="28">All</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="27">for</governor>
+            <dependent idx="29">study</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="29">study</governor>
+            <dependent idx="30">performed</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="30">performed</governor>
+            <dependent idx="31">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="31">in</governor>
+            <dependent idx="32">1998</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="21">published</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="4">ELODIS</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="5">PUBLIC</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="6">HEALTH</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="7">FACT</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="8">SHEET</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="9">2004</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="10">2004/05/30</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="21">published</governor>
+            <dependent idx="11">ELODIS</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="13">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="15">The</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="16">Elodis</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="17">Community</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="18">Health</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="13">Kronos</governor>
+            <dependent idx="19">Center</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="21">published</governor>
+            <dependent idx="20">has</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="23">update</governor>
+            <dependent idx="22">an</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="21">published</governor>
+            <dependent idx="23">update</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="26">Wellness</governor>
+            <dependent idx="25">the</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="23">update</governor>
+            <dependent idx="26">Wellness</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="29">study</governor>
+            <dependent idx="28">All</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="23">update</governor>
+            <dependent idx="29">study</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="29">study</governor>
+            <dependent idx="30">performed</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="30">performed</governor>
+            <dependent idx="32">1998</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="21">published</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="4">ELODIS</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="5">PUBLIC</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="6">HEALTH</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="7">FACT</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="8">SHEET</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="9">2004</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="10">2004/05/30</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="21">published</governor>
+            <dependent idx="11">ELODIS</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="11">ELODIS</governor>
+            <dependent idx="13">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="15">The</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="16">Elodis</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="17">Community</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="19">Center</governor>
+            <dependent idx="18">Health</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="13">Kronos</governor>
+            <dependent idx="19">Center</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="21">published</governor>
+            <dependent idx="20">has</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="23">update</governor>
+            <dependent idx="22">an</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="21">published</governor>
+            <dependent idx="23">update</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="26">Wellness</governor>
+            <dependent idx="25">the</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="23">update</governor>
+            <dependent idx="26">Wellness</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="29">study</governor>
+            <dependent idx="28">All</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="23">update</governor>
+            <dependent idx="29">study</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="29">study</governor>
+            <dependent idx="30">performed</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="30">performed</governor>
+            <dependent idx="32">1998</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+    </sentences>
+    <coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>1</sentence>
+          <start>13</start>
+          <end>20</end>
+          <head>13</head>
+          <text>Kronos - The Elodis Community Health Center</text>
+        </mention>
+        <mention>
+          <sentence>1</sentence>
+          <start>1</start>
+          <end>12</end>
+          <head>11</head>
+          <text>News Online Today ELODIS PUBLIC HEALTH FACT SHEET 2004 2004/05/30 ELODIS</text>
+        </mention>
+      </coreference>
+    </coreference>
+  </document>
+</root>

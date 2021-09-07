@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>News</word>
+            <lemma>News</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>4</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>Online</word>
+            <lemma>Online</lemma>
+            <CharacterOffsetBegin>5</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>Today</word>
+            <lemma>Today</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>THIS P1D</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t1" type="DATE"/>
+          </token>
+          <token id="4">
+            <word>TRAFFIC</word>
+            <lemma>TRAFFIC</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>ACCIDENT</word>
+            <lemma>ACCIDENT</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>NEAR</word>
+            <lemma>near</lemma>
+            <CharacterOffsetBegin>36</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>ELODIS</word>
+            <lemma>ELODIS</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>2007/04/11</word>
+            <lemma>2007/04/11</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>64</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>2007-04-11</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t2" type="DATE">2007-04-11</Timex>
+          </token>
+          <token id="9">
+            <word>ABILA</word>
+            <lemma>ABILA</lemma>
+            <CharacterOffsetBegin>68</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>LOCATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="10">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>73</CharacterOffsetBegin>
+            <CharacterOffsetEnd>74</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>Kronos</word>
+            <lemma>Kronos</lemma>
+            <CharacterOffsetBegin>75</CharacterOffsetBegin>
+            <CharacterOffsetEnd>81</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>-</word>
+            <lemma>-</lemma>
+            <CharacterOffsetBegin>82</CharacterOffsetBegin>
+            <CharacterOffsetEnd>83</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>A</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>84</CharacterOffsetBegin>
+            <CharacterOffsetEnd>85</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>government</word>
+            <lemma>government</lemma>
+            <CharacterOffsetBegin>86</CharacterOffsetBegin>
+            <CharacterOffsetEnd>96</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>investigation</word>
+            <lemma>investigation</lemma>
+            <CharacterOffsetBegin>97</CharacterOffsetBegin>
+            <CharacterOffsetEnd>110</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>has</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>111</CharacterOffsetBegin>
+            <CharacterOffsetEnd>114</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>concluded</word>
+            <lemma>conclude</lemma>
+            <CharacterOffsetBegin>115</CharacterOffsetBegin>
+            <CharacterOffsetEnd>124</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="18">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>125</CharacterOffsetBegin>
+            <CharacterOffsetEnd>126</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="19">
+            <word>traffic</word>
+            <lemma>traffic</lemma>
+            <CharacterOffsetBegin>127</CharacterOffsetBegin>
+            <CharacterOffsetEnd>134</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="20">
+            <word>accident</word>
+            <lemma>accident</lemma>
+            <CharacterOffsetBegin>135</CharacterOffsetBegin>
+            <CharacterOffsetEnd>143</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="21">
+            <word>involving</word>
+            <lemma>involve</lemma>
+            <CharacterOffsetBegin>144</CharacterOffsetBegin>
+            <CharacterOffsetEnd>153</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="22">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>154</CharacterOffsetBegin>
+            <CharacterOffsetEnd>155</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="23">
+            <word>GAStech</word>
+            <lemma>GAStech</lemma>
+            <CharacterOffsetBegin>156</CharacterOffsetBegin>
+            <CharacterOffsetEnd>163</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>MISC</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="24">
+            <word>International</word>
+            <lemma>International</lemma>
+            <CharacterOffsetBegin>164</CharacterOffsetBegin>
+            <CharacterOffsetEnd>177</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>MISC</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="25">
+            <word>vehicle</word>
+            <lemma>vehicle</lemma>
+            <CharacterOffsetBegin>178</CharacterOffsetBegin>
+            <CharacterOffsetEnd>185</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="26">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>186</CharacterOffsetBegin>
+            <CharacterOffsetEnd>189</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="27">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>190</CharacterOffsetBegin>
+            <CharacterOffsetEnd>193</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="28">
+            <word>vehicle</word>
+            <lemma>vehicle</lemma>
+            <CharacterOffsetBegin>194</CharacterOffsetBegin>
+            <CharacterOffsetEnd>201</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="29">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>202</CharacterOffsetBegin>
+            <CharacterOffsetEnd>204</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="30">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>205</CharacterOffsetBegin>
+            <CharacterOffsetEnd>206</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="31">
+            <word>family</word>
+            <lemma>family</lemma>
+            <CharacterOffsetBegin>207</CharacterOffsetBegin>
+            <CharacterOffsetEnd>213</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="32">
+            <word>from</word>
+            <lemma>from</lemma>
+            <CharacterOffsetBegin>214</CharacterOffsetBegin>
+            <CharacterOffsetEnd>218</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="33">
+            <word>Elodis</word>
+            <lemma>Elodis</lemma>
+            <CharacterOffsetBegin>219</CharacterOffsetBegin>
+            <CharacterOffsetEnd>225</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="34">
+            <word>resulting</word>
+            <lemma>result</lemma>
+            <CharacterOffsetBegin>226</CharacterOffsetBegin>
+            <CharacterOffsetEnd>235</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="35">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>236</CharacterOffsetBegin>
+            <CharacterOffsetEnd>238</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="36">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>239</CharacterOffsetBegin>
+            <CharacterOffsetEnd>242</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="37">
+            <word>deaths</word>
+            <lemma>death</lemma>
+            <CharacterOffsetBegin>243</CharacterOffsetBegin>
+            <CharacterOffsetEnd>249</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="38">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>250</CharacterOffsetBegin>
+            <CharacterOffsetEnd>252</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="39">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>253</CharacterOffsetBegin>
+            <CharacterOffsetEnd>256</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="40">
+            <word>four</word>
+            <lemma>four</lemma>
+            <CharacterOffsetBegin>257</CharacterOffsetBegin>
+            <CharacterOffsetEnd>261</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>NUMBER</NER>
+            <NormalizedNER>4.0</NormalizedNER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="41">
+            <word>family</word>
+            <lemma>family</lemma>
+            <CharacterOffsetBegin>262</CharacterOffsetBegin>
+            <CharacterOffsetEnd>268</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="42">
+            <word>members</word>
+            <lemma>member</lemma>
+            <CharacterOffsetBegin>269</CharacterOffsetBegin>
+            <CharacterOffsetEnd>276</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="43">
+            <word>was</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>277</CharacterOffsetBegin>
+            <CharacterOffsetEnd>280</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="44">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>281</CharacterOffsetBegin>
+            <CharacterOffsetEnd>284</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="45">
+            <word>result</word>
+            <lemma>result</lemma>
+            <CharacterOffsetBegin>285</CharacterOffsetBegin>
+            <CharacterOffsetEnd>291</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="46">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>292</CharacterOffsetBegin>
+            <CharacterOffsetEnd>294</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="47">
+            <word>driver</word>
+            <lemma>driver</lemma>
+            <CharacterOffsetBegin>295</CharacterOffsetBegin>
+            <CharacterOffsetEnd>301</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="48">
+            <word>error</word>
+            <lemma>error</lemma>
+            <CharacterOffsetBegin>302</CharacterOffsetBegin>
+            <CharacterOffsetEnd>307</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="49">
+            <word>on</word>
+            <lemma>on</lemma>
+            <CharacterOffsetBegin>308</CharacterOffsetBegin>
+            <CharacterOffsetEnd>310</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="50">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>311</CharacterOffsetBegin>
+            <CharacterOffsetEnd>314</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="51">
+            <word>part</word>
+            <lemma>part</lemma>
+            <CharacterOffsetBegin>315</CharacterOffsetBegin>
+            <CharacterOffsetEnd>319</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="52">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>320</CharacterOffsetBegin>
+            <CharacterOffsetEnd>322</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="53">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>323</CharacterOffsetBegin>
+            <CharacterOffsetEnd>326</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="54">
+            <word>Elodisian</word>
+            <lemma>elodisian</lemma>
+            <CharacterOffsetBegin>327</CharacterOffsetBegin>
+            <CharacterOffsetEnd>336</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>LOCATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="55">
+            <word>driver</word>
+            <lemma>driver</lemma>
+            <CharacterOffsetBegin>337</CharacterOffsetBegin>
+            <CharacterOffsetEnd>343</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="56">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>343</CharacterOffsetBegin>
+            <CharacterOffsetEnd>344</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NNP News) (NNP Online) (NNP Today) (NNP TRAFFIC) (NNP ACCIDENT)) (PP (IN NEAR) (NP (NNP ELODIS) (CD 2007/04/11))) (NP (NP (NNP ABILA) (, ,) (NNP Kronos)) (PRN (: -) (S (NP (NN A) (NN government) (NN investigation)) (VP (VBZ has) (VP (VBN concluded) (NP (NP (DT a) (NN traffic) (NN accident)) (PP (VBG involving) (NP (NP (DT a) (NNP GAStech) (NNP International) (NN vehicle)) (CC and) (NP (DT the) (NN vehicle))))))))) (PP (IN of) (NP (NP (DT a) (NN family)) (PP (IN from) (NP (NP (NNP Elodis)) (VP (VBG resulting) (PP (IN in) (NP (NP (DT the) (NNS deaths)) (PP (IN of) (NP (DT the) (CD four) (NN family) (NNS members))))))))))) (VP (VBD was) (NP (NP (DT the) (NN result)) (PP (IN of) (NP (NP (NN driver) (NN error)) (PP (IN on) (NP (NP (DT the) (NN part)) (PP (IN of) (NP (DT the) (JJ Elodisian) (NN driver))))))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="45">result</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="4">TRAFFIC</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="45">result</governor>
+            <dependent idx="5">ACCIDENT</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="45">result</governor>
+            <dependent idx="6">NEAR</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">NEAR</governor>
+            <dependent idx="7">ELODIS</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="7">ELODIS</governor>
+            <dependent idx="8">2007/04/11</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="9">ABILA</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="45">result</governor>
+            <dependent idx="11">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">investigation</governor>
+            <dependent idx="13">A</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">investigation</governor>
+            <dependent idx="14">government</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="17">concluded</governor>
+            <dependent idx="15">investigation</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="17">concluded</governor>
+            <dependent idx="16">has</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="17">concluded</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="20">accident</governor>
+            <dependent idx="18">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">accident</governor>
+            <dependent idx="19">traffic</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="17">concluded</governor>
+            <dependent idx="20">accident</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="20">accident</governor>
+            <dependent idx="21">involving</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="22">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="23">GAStech</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="24">International</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="21">involving</governor>
+            <dependent idx="25">vehicle</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="26">and</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="28">vehicle</governor>
+            <dependent idx="27">the</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="28">vehicle</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="29">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="31">family</governor>
+            <dependent idx="30">a</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="29">of</governor>
+            <dependent idx="31">family</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="31">family</governor>
+            <dependent idx="32">from</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="32">from</governor>
+            <dependent idx="33">Elodis</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="33">Elodis</governor>
+            <dependent idx="34">resulting</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="34">resulting</governor>
+            <dependent idx="35">in</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="37">deaths</governor>
+            <dependent idx="36">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="35">in</governor>
+            <dependent idx="37">deaths</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="37">deaths</governor>
+            <dependent idx="38">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="42">members</governor>
+            <dependent idx="39">the</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="42">members</governor>
+            <dependent idx="40">four</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="42">members</governor>
+            <dependent idx="41">family</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="38">of</governor>
+            <dependent idx="42">members</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="45">result</governor>
+            <dependent idx="43">was</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="45">result</governor>
+            <dependent idx="44">the</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="45">result</governor>
+            <dependent idx="46">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="48">error</governor>
+            <dependent idx="47">driver</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="46">of</governor>
+            <dependent idx="48">error</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="48">error</governor>
+            <dependent idx="49">on</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="51">part</governor>
+            <dependent idx="50">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="49">on</governor>
+            <dependent idx="51">part</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="51">part</governor>
+            <dependent idx="52">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="55">driver</governor>
+            <dependent idx="53">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="55">driver</governor>
+            <dependent idx="54">Elodisian</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="52">of</governor>
+            <dependent idx="55">driver</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="45">result</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="4">TRAFFIC</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="45">result</governor>
+            <dependent idx="5">ACCIDENT</dependent>
+          </dep>
+          <dep type="prep_near">
+            <governor idx="45">result</governor>
+            <dependent idx="7">ELODIS</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="7">ELODIS</governor>
+            <dependent idx="8">2007/04/11</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="9">ABILA</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="45">result</governor>
+            <dependent idx="11">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">investigation</governor>
+            <dependent idx="13">A</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">investigation</governor>
+            <dependent idx="14">government</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="17">concluded</governor>
+            <dependent idx="15">investigation</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="17">concluded</governor>
+            <dependent idx="16">has</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="17">concluded</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="20">accident</governor>
+            <dependent idx="18">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">accident</governor>
+            <dependent idx="19">traffic</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="17">concluded</governor>
+            <dependent idx="20">accident</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="22">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="23">GAStech</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="24">International</dependent>
+          </dep>
+          <dep type="prep_involving">
+            <governor idx="20">accident</governor>
+            <dependent idx="25">vehicle</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="28">vehicle</governor>
+            <dependent idx="27">the</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="28">vehicle</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="31">family</governor>
+            <dependent idx="30">a</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="31">family</dependent>
+          </dep>
+          <dep type="prep_from">
+            <governor idx="31">family</governor>
+            <dependent idx="33">Elodis</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="33">Elodis</governor>
+            <dependent idx="34">resulting</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="37">deaths</governor>
+            <dependent idx="36">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="34">resulting</governor>
+            <dependent idx="37">deaths</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="42">members</governor>
+            <dependent idx="39">the</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="42">members</governor>
+            <dependent idx="40">four</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="42">members</governor>
+            <dependent idx="41">family</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="37">deaths</governor>
+            <dependent idx="42">members</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="45">result</governor>
+            <dependent idx="43">was</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="45">result</governor>
+            <dependent idx="44">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="48">error</governor>
+            <dependent idx="47">driver</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="45">result</governor>
+            <dependent idx="48">error</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="51">part</governor>
+            <dependent idx="50">the</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="48">error</governor>
+            <dependent idx="51">part</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="55">driver</governor>
+            <dependent idx="53">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="55">driver</governor>
+            <dependent idx="54">Elodisian</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="51">part</governor>
+            <dependent idx="55">driver</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="45">result</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">ACCIDENT</governor>
+            <dependent idx="4">TRAFFIC</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="45">result</governor>
+            <dependent idx="5">ACCIDENT</dependent>
+          </dep>
+          <dep type="prep_near">
+            <governor idx="45">result</governor>
+            <dependent idx="7">ELODIS</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="7">ELODIS</governor>
+            <dependent idx="8">2007/04/11</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="9">ABILA</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="45">result</governor>
+            <dependent idx="11">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">investigation</governor>
+            <dependent idx="13">A</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">investigation</governor>
+            <dependent idx="14">government</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="17">concluded</governor>
+            <dependent idx="15">investigation</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="17">concluded</governor>
+            <dependent idx="16">has</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="17">concluded</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="20">accident</governor>
+            <dependent idx="18">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="20">accident</governor>
+            <dependent idx="19">traffic</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="17">concluded</governor>
+            <dependent idx="20">accident</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="22">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="23">GAStech</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="24">International</dependent>
+          </dep>
+          <dep type="prep_involving">
+            <governor idx="20">accident</governor>
+            <dependent idx="25">vehicle</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="28">vehicle</governor>
+            <dependent idx="27">the</dependent>
+          </dep>
+          <dep type="prep_involving">
+            <governor idx="20">accident</governor>
+            <dependent idx="28">vehicle</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="25">vehicle</governor>
+            <dependent idx="28">vehicle</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="31">family</governor>
+            <dependent idx="30">a</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="11">Kronos</governor>
+            <dependent idx="31">family</dependent>
+          </dep>
+          <dep type="prep_from">
+            <governor idx="31">family</governor>
+            <dependent idx="33">Elodis</dependent>
+          </dep>
+          <dep type="vmod">
+            <governor idx="33">Elodis</governor>
+            <dependent idx="34">resulting</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="37">deaths</governor>
+            <dependent idx="36">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="34">resulting</governor>
+            <dependent idx="37">deaths</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="42">members</governor>
+            <dependent idx="39">the</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="42">members</governor>
+            <dependent idx="40">four</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="42">members</governor>
+            <dependent idx="41">family</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="37">deaths</governor>
+            <dependent idx="42">members</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="45">result</governor>
+            <dependent idx="43">was</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="45">result</governor>
+            <dependent idx="44">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="48">error</governor>
+            <dependent idx="47">driver</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="45">result</governor>
+            <dependent idx="48">error</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="51">part</governor>
+            <dependent idx="50">the</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="48">error</governor>
+            <dependent idx="51">part</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="55">driver</governor>
+            <dependent idx="53">the</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="55">driver</governor>
+            <dependent idx="54">Elodisian</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="51">part</governor>
+            <dependent idx="55">driver</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+    </sentences>
+    <coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>1</sentence>
+          <start>1</start>
+          <end>6</end>
+          <head>5</head>
+          <text>News Online Today TRAFFIC ACCIDENT</text>
+        </mention>
+        <mention>
+          <sentence>1</sentence>
+          <start>44</start>
+          <end>56</end>
+          <head>45</head>
+          <text>the result of driver error on the part of the Elodisian driver</text>
+        </mention>
+      </coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>1</sentence>
+          <start>22</start>
+          <end>26</end>
+          <head>25</head>
+          <text>a GAStech International vehicle</text>
+        </mention>
+        <mention>
+          <sentence>1</sentence>
+          <start>27</start>
+          <end>29</end>
+          <head>28</head>
+          <text>the vehicle</text>
+        </mention>
+      </coreference>
+    </coreference>
+  </document>
+</root>

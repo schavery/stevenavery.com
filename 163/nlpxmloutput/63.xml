@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>News</word>
+            <lemma>News</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>4</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>Online</word>
+            <lemma>Online</lemma>
+            <CharacterOffsetBegin>5</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>Today</word>
+            <lemma>Today</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>THIS P1D</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t1" type="DATE"/>
+          </token>
+          <token id="4">
+            <word>GASTECH</word>
+            <lemma>GASTECH</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>LEADERSHIP</word>
+            <lemma>LEADERSHIP</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>37</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>CONFIRMED</word>
+            <lemma>confirm</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>MISSING</word>
+            <lemma>miss</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>2014/01/20</word>
+            <lemma>2014/01/20</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>71</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>2014-01-20</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t2" type="DATE">2014-01-20</Timex>
+          </token>
+          <token id="9">
+            <word>ABILA</word>
+            <lemma>abilum</lemma>
+            <CharacterOffsetBegin>75</CharacterOffsetBegin>
+            <CharacterOffsetEnd>80</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="10">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>80</CharacterOffsetBegin>
+            <CharacterOffsetEnd>81</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>Kronos</word>
+            <lemma>Kronos</lemma>
+            <CharacterOffsetBegin>82</CharacterOffsetBegin>
+            <CharacterOffsetEnd>88</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>-</word>
+            <lemma>-</lemma>
+            <CharacterOffsetBegin>89</CharacterOffsetBegin>
+            <CharacterOffsetEnd>90</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>Miriam</word>
+            <lemma>Miriam</lemma>
+            <CharacterOffsetBegin>91</CharacterOffsetBegin>
+            <CharacterOffsetEnd>97</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>PERSON</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>Avila</word>
+            <lemma>Avila</lemma>
+            <CharacterOffsetBegin>98</CharacterOffsetBegin>
+            <CharacterOffsetEnd>103</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>PERSON</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>103</CharacterOffsetBegin>
+            <CharacterOffsetEnd>104</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>an</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>105</CharacterOffsetBegin>
+            <CharacterOffsetEnd>107</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>administrative</word>
+            <lemma>administrative</lemma>
+            <CharacterOffsetBegin>108</CharacterOffsetBegin>
+            <CharacterOffsetEnd>122</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="18">
+            <word>assistant</word>
+            <lemma>assistant</lemma>
+            <CharacterOffsetBegin>123</CharacterOffsetBegin>
+            <CharacterOffsetEnd>132</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="19">
+            <word>at</word>
+            <lemma>at</lemma>
+            <CharacterOffsetBegin>133</CharacterOffsetBegin>
+            <CharacterOffsetEnd>135</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="20">
+            <word>GAStech</word>
+            <lemma>GAStech</lemma>
+            <CharacterOffsetBegin>136</CharacterOffsetBegin>
+            <CharacterOffsetEnd>143</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="21">
+            <word>International</word>
+            <lemma>International</lemma>
+            <CharacterOffsetBegin>144</CharacterOffsetBegin>
+            <CharacterOffsetEnd>157</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="22">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>157</CharacterOffsetBegin>
+            <CharacterOffsetEnd>158</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="23">
+            <word>has</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>159</CharacterOffsetBegin>
+            <CharacterOffsetEnd>162</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="24">
+            <word>confirmed</word>
+            <lemma>confirm</lemma>
+            <CharacterOffsetBegin>163</CharacterOffsetBegin>
+            <CharacterOffsetEnd>172</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="25">
+            <word>that</word>
+            <lemma>that</lemma>
+            <CharacterOffsetBegin>173</CharacterOffsetBegin>
+            <CharacterOffsetEnd>177</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="26">
+            <word>members</word>
+            <lemma>member</lemma>
+            <CharacterOffsetBegin>178</CharacterOffsetBegin>
+            <CharacterOffsetEnd>185</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="27">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>186</CharacterOffsetBegin>
+            <CharacterOffsetEnd>188</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="28">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>189</CharacterOffsetBegin>
+            <CharacterOffsetEnd>192</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="29">
+            <word>GAStech</word>
+            <lemma>gastech</lemma>
+            <CharacterOffsetBegin>193</CharacterOffsetBegin>
+            <CharacterOffsetEnd>200</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="30">
+            <word>leadership</word>
+            <lemma>leadership</lemma>
+            <CharacterOffsetBegin>201</CharacterOffsetBegin>
+            <CharacterOffsetEnd>211</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="31">
+            <word>are</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>212</CharacterOffsetBegin>
+            <CharacterOffsetEnd>215</CharacterOffsetEnd>
+            <POS>VBP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="32">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>216</CharacterOffsetBegin>
+            <CharacterOffsetEnd>218</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="33">
+            <word>fact</word>
+            <lemma>fact</lemma>
+            <CharacterOffsetBegin>219</CharacterOffsetBegin>
+            <CharacterOffsetEnd>223</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="34">
+            <word>missing</word>
+            <lemma>miss</lemma>
+            <CharacterOffsetBegin>224</CharacterOffsetBegin>
+            <CharacterOffsetEnd>231</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="35">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>231</CharacterOffsetBegin>
+            <CharacterOffsetEnd>232</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (S (NP (NNP News) (NNP Online) (NNP Today) (NNP GASTECH) (NNP LEADERSHIP)) (VP (VBD CONFIRMED) (S (VP (VBG MISSING) (NP (NP (CD 2014/01/20) (NN ABILA)) (, ,) (NP (NNP Kronos))))))) (: -) (S (NP (NP (NNP Miriam) (NNP Avila)) (, ,) (NP (NP (DT an) (JJ administrative) (NN assistant)) (PP (IN at) (NP (NNP GAStech) (NNP International)))) (, ,)) (VP (VBZ has) (VP (VBN confirmed) (SBAR (IN that) (S (NP (NP (NNS members)) (PP (IN of) (NP (DT the) (NN GAStech) (NN leadership)))) (VP (VBP are) (PP (IN in) (NP (NN fact))) (ADJP (VBG missing)))))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="6">CONFIRMED</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="4">GASTECH</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="5">LEADERSHIP</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="7">MISSING</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="9">ABILA</governor>
+            <dependent idx="8">2014/01/20</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">MISSING</governor>
+            <dependent idx="9">ABILA</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="9">ABILA</governor>
+            <dependent idx="11">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="14">Avila</governor>
+            <dependent idx="13">Miriam</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="14">Avila</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="18">assistant</governor>
+            <dependent idx="16">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="18">assistant</governor>
+            <dependent idx="17">administrative</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="14">Avila</governor>
+            <dependent idx="18">assistant</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="18">assistant</governor>
+            <dependent idx="19">at</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="21">International</governor>
+            <dependent idx="20">GAStech</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="19">at</governor>
+            <dependent idx="21">International</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="23">has</dependent>
+          </dep>
+          <dep type="parataxis">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="24">confirmed</dependent>
+          </dep>
+          <dep type="mark">
+            <governor idx="34">missing</governor>
+            <dependent idx="25">that</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="34">missing</governor>
+            <dependent idx="26">members</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="26">members</governor>
+            <dependent idx="27">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="30">leadership</governor>
+            <dependent idx="28">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="30">leadership</governor>
+            <dependent idx="29">GAStech</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="27">of</governor>
+            <dependent idx="30">leadership</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="34">missing</governor>
+            <dependent idx="31">are</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="34">missing</governor>
+            <dependent idx="32">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="32">in</governor>
+            <dependent idx="33">fact</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="34">missing</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="6">CONFIRMED</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="4">GASTECH</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="5">LEADERSHIP</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="7">MISSING</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="9">ABILA</governor>
+            <dependent idx="8">2014/01/20</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">MISSING</governor>
+            <dependent idx="9">ABILA</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="9">ABILA</governor>
+            <dependent idx="11">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="14">Avila</governor>
+            <dependent idx="13">Miriam</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="14">Avila</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="18">assistant</governor>
+            <dependent idx="16">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="18">assistant</governor>
+            <dependent idx="17">administrative</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="14">Avila</governor>
+            <dependent idx="18">assistant</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="21">International</governor>
+            <dependent idx="20">GAStech</dependent>
+          </dep>
+          <dep type="prep_at">
+            <governor idx="18">assistant</governor>
+            <dependent idx="21">International</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="23">has</dependent>
+          </dep>
+          <dep type="parataxis">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="24">confirmed</dependent>
+          </dep>
+          <dep type="mark">
+            <governor idx="34">missing</governor>
+            <dependent idx="25">that</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="34">missing</governor>
+            <dependent idx="26">members</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="30">leadership</governor>
+            <dependent idx="28">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="30">leadership</governor>
+            <dependent idx="29">GAStech</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="26">members</governor>
+            <dependent idx="30">leadership</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="34">missing</governor>
+            <dependent idx="31">are</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="34">missing</governor>
+            <dependent idx="33">fact</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="34">missing</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="6">CONFIRMED</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">LEADERSHIP</governor>
+            <dependent idx="4">GASTECH</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="5">LEADERSHIP</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="7">MISSING</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="9">ABILA</governor>
+            <dependent idx="8">2014/01/20</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">MISSING</governor>
+            <dependent idx="9">ABILA</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="9">ABILA</governor>
+            <dependent idx="11">Kronos</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="14">Avila</governor>
+            <dependent idx="13">Miriam</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="14">Avila</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="18">assistant</governor>
+            <dependent idx="16">an</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="18">assistant</governor>
+            <dependent idx="17">administrative</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="14">Avila</governor>
+            <dependent idx="18">assistant</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="21">International</governor>
+            <dependent idx="20">GAStech</dependent>
+          </dep>
+          <dep type="prep_at">
+            <governor idx="18">assistant</governor>
+            <dependent idx="21">International</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="23">has</dependent>
+          </dep>
+          <dep type="parataxis">
+            <governor idx="6">CONFIRMED</governor>
+            <dependent idx="24">confirmed</dependent>
+          </dep>
+          <dep type="mark">
+            <governor idx="34">missing</governor>
+            <dependent idx="25">that</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="34">missing</governor>
+            <dependent idx="26">members</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="30">leadership</governor>
+            <dependent idx="28">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="30">leadership</governor>
+            <dependent idx="29">GAStech</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="26">members</governor>
+            <dependent idx="30">leadership</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="34">missing</governor>
+            <dependent idx="31">are</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="34">missing</governor>
+            <dependent idx="33">fact</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="24">confirmed</governor>
+            <dependent idx="34">missing</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+      <sentence id="2">
+        <tokens>
+          <token id="1">
+            <word>maintains</word>
+            <lemma>maintain</lemma>
+            <CharacterOffsetBegin>233</CharacterOffsetBegin>
+            <CharacterOffsetEnd>242</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>an</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>243</CharacterOffsetBegin>
+            <CharacterOffsetEnd>245</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>office</word>
+            <lemma>office</lemma>
+            <CharacterOffsetBegin>246</CharacterOffsetBegin>
+            <CharacterOffsetEnd>252</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="4">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>253</CharacterOffsetBegin>
+            <CharacterOffsetEnd>255</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>Centrum</word>
+            <lemma>Centrum</lemma>
+            <CharacterOffsetBegin>256</CharacterOffsetBegin>
+            <CharacterOffsetEnd>263</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>263</CharacterOffsetBegin>
+            <CharacterOffsetEnd>264</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>265</CharacterOffsetBegin>
+            <CharacterOffsetEnd>268</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>capital</word>
+            <lemma>capital</lemma>
+            <CharacterOffsetBegin>269</CharacterOffsetBegin>
+            <CharacterOffsetEnd>276</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>277</CharacterOffsetBegin>
+            <CharacterOffsetEnd>279</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="10">
+            <word>Tethys</word>
+            <lemma>Tethys</lemma>
+            <CharacterOffsetBegin>280</CharacterOffsetBegin>
+            <CharacterOffsetEnd>286</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>286</CharacterOffsetBegin>
+            <CharacterOffsetEnd>287</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>most</word>
+            <lemma>most</lemma>
+            <CharacterOffsetBegin>288</CharacterOffsetBegin>
+            <CharacterOffsetEnd>292</CharacterOffsetEnd>
+            <POS>JJS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>293</CharacterOffsetBegin>
+            <CharacterOffsetEnd>295</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>GAStech</word>
+            <lemma>GAStech</lemma>
+            <CharacterOffsetBegin>296</CharacterOffsetBegin>
+            <CharacterOffsetEnd>303</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>International</word>
+            <lemma>International</lemma>
+            <CharacterOffsetBegin>304</CharacterOffsetBegin>
+            <CharacterOffsetEnd>317</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>'s</word>
+            <lemma>'s</lemma>
+            <CharacterOffsetBegin>317</CharacterOffsetBegin>
+            <CharacterOffsetEnd>319</CharacterOffsetEnd>
+            <POS>POS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>operations</word>
+            <lemma>operation</lemma>
+            <CharacterOffsetBegin>320</CharacterOffsetBegin>
+            <CharacterOffsetEnd>330</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="18">
+            <word>take</word>
+            <lemma>take</lemma>
+            <CharacterOffsetBegin>331</CharacterOffsetBegin>
+            <CharacterOffsetEnd>335</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="19">
+            <word>place</word>
+            <lemma>place</lemma>
+            <CharacterOffsetBegin>336</CharacterOffsetBegin>
+            <CharacterOffsetEnd>341</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="20">
+            <word>on</word>
+            <lemma>on</lemma>
+            <CharacterOffsetBegin>342</CharacterOffsetBegin>
+            <CharacterOffsetEnd>344</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="21">
+            <word>Kronos</word>
+            <lemma>Kronos</lemma>
+            <CharacterOffsetBegin>345</CharacterOffsetBegin>
+            <CharacterOffsetEnd>351</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>MISC</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="22">
+            <word>including</word>
+            <lemma>include</lemma>
+            <CharacterOffsetBegin>352</CharacterOffsetBegin>
+            <CharacterOffsetEnd>361</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="23">
+            <word>production</word>
+            <lemma>production</lemma>
+            <CharacterOffsetBegin>362</CharacterOffsetBegin>
+            <CharacterOffsetEnd>372</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="24">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>373</CharacterOffsetBegin>
+            <CharacterOffsetEnd>375</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="25">
+            <word>about</word>
+            <lemma>about</lemma>
+            <CharacterOffsetBegin>376</CharacterOffsetBegin>
+            <CharacterOffsetEnd>381</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="26">
+            <word>5</word>
+            <lemma>5</lemma>
+            <CharacterOffsetBegin>382</CharacterOffsetBegin>
+            <CharacterOffsetEnd>383</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>NUMBER</NER>
+            <NormalizedNER>~5000000.0</NormalizedNER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="27">
+            <word>million</word>
+            <lemma>million</lemma>
+            <CharacterOffsetBegin>384</CharacterOffsetBegin>
+            <CharacterOffsetEnd>391</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>NUMBER</NER>
+            <NormalizedNER>~5000000.0</NormalizedNER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="28">
+            <word>cubic</word>
+            <lemma>cubic</lemma>
+            <CharacterOffsetBegin>392</CharacterOffsetBegin>
+            <CharacterOffsetEnd>397</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="29">
+            <word>meters</word>
+            <lemma>meter</lemma>
+            <CharacterOffsetBegin>398</CharacterOffsetBegin>
+            <CharacterOffsetEnd>404</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="30">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>405</CharacterOffsetBegin>
+            <CharacterOffsetEnd>407</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="31">
+            <word>gas</word>
+            <lemma>gas</lemma>
+            <CharacterOffsetBegin>408</CharacterOffsetBegin>
+            <CharacterOffsetEnd>411</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="32">
+            <word>daily</word>
+            <lemma>daily</lemma>
+            <CharacterOffsetBegin>412</CharacterOffsetBegin>
+            <CharacterOffsetEnd>417</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>SET</NER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t3" type="SET">P1D</Timex>
+          </token>
+          <token id="33">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>417</CharacterOffsetBegin>
+            <CharacterOffsetEnd>418</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (VP (VBZ maintains) (S (NP (NP (DT an) (NN office)) (PP (IN in) (NP (NP (NNP Centrum)) (, ,) (NP (NP (DT the) (NN capital)) (PP (IN of) (NP (NNP Tethys)))) (, ,) (NP (NP (JJS most)) (PP (IN of) (NP (NP (NNP GAStech) (NNP International) (POS 's)) (NNS operations))))))) (VP (VB take) (NP (NN place)) (PP (IN on) (NP (NP (NNP Kronos)) (PP (VBG including) (NP (NP (NN production)) (PP (IN of) (PP (IN about) (NP (NP (QP (CD 5) (CD million)) (JJ cubic) (NNS meters)) (PP (IN of) (NP (NN gas)))) (ADVP (RB daily))))))))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="1">maintains</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="3">office</governor>
+            <dependent idx="2">an</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="18">take</governor>
+            <dependent idx="3">office</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">office</governor>
+            <dependent idx="4">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">in</governor>
+            <dependent idx="5">Centrum</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">capital</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="5">Centrum</governor>
+            <dependent idx="8">capital</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">capital</governor>
+            <dependent idx="9">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">of</governor>
+            <dependent idx="10">Tethys</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="5">Centrum</governor>
+            <dependent idx="12">most</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">most</governor>
+            <dependent idx="13">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">International</governor>
+            <dependent idx="14">GAStech</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="17">operations</governor>
+            <dependent idx="15">International</dependent>
+          </dep>
+          <dep type="possessive">
+            <governor idx="15">International</governor>
+            <dependent idx="16">'s</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">of</governor>
+            <dependent idx="17">operations</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="1">maintains</governor>
+            <dependent idx="18">take</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="18">take</governor>
+            <dependent idx="19">place</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="18">take</governor>
+            <dependent idx="20">on</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="20">on</governor>
+            <dependent idx="21">Kronos</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="21">Kronos</governor>
+            <dependent idx="22">including</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="22">including</governor>
+            <dependent idx="23">production</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="23">production</governor>
+            <dependent idx="24">of</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="24">of</governor>
+            <dependent idx="25">about</dependent>
+          </dep>
+          <dep type="number">
+            <governor idx="27">million</governor>
+            <dependent idx="26">5</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="29">meters</governor>
+            <dependent idx="27">million</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="29">meters</governor>
+            <dependent idx="28">cubic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="25">about</governor>
+            <dependent idx="29">meters</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="29">meters</governor>
+            <dependent idx="30">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="30">of</governor>
+            <dependent idx="31">gas</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="25">about</governor>
+            <dependent idx="32">daily</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="1">maintains</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="3">office</governor>
+            <dependent idx="2">an</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="18">take</governor>
+            <dependent idx="3">office</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="3">office</governor>
+            <dependent idx="5">Centrum</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">capital</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="5">Centrum</governor>
+            <dependent idx="8">capital</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="8">capital</governor>
+            <dependent idx="10">Tethys</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="5">Centrum</governor>
+            <dependent idx="12">most</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">International</governor>
+            <dependent idx="14">GAStech</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="17">operations</governor>
+            <dependent idx="15">International</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="12">most</governor>
+            <dependent idx="17">operations</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="1">maintains</governor>
+            <dependent idx="18">take</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="18">take</governor>
+            <dependent idx="19">place</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="18">take</governor>
+            <dependent idx="21">Kronos</dependent>
+          </dep>
+          <dep type="prep_including">
+            <governor idx="21">Kronos</governor>
+            <dependent idx="23">production</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="23">production</governor>
+            <dependent idx="24">of</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="24">of</governor>
+            <dependent idx="25">about</dependent>
+          </dep>
+          <dep type="number">
+            <governor idx="27">million</governor>
+            <dependent idx="26">5</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="29">meters</governor>
+            <dependent idx="27">million</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="29">meters</governor>
+            <dependent idx="28">cubic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="25">about</governor>
+            <dependent idx="29">meters</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="29">meters</governor>
+            <dependent idx="31">gas</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="25">about</governor>
+            <dependent idx="32">daily</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="1">maintains</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="3">office</governor>
+            <dependent idx="2">an</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="18">take</governor>
+            <dependent idx="3">office</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="3">office</governor>
+            <dependent idx="5">Centrum</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">capital</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="5">Centrum</governor>
+            <dependent idx="8">capital</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="8">capital</governor>
+            <dependent idx="10">Tethys</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="5">Centrum</governor>
+            <dependent idx="12">most</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="15">International</governor>
+            <dependent idx="14">GAStech</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="17">operations</governor>
+            <dependent idx="15">International</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="12">most</governor>
+            <dependent idx="17">operations</dependent>
+          </dep>
+          <dep type="ccomp">
+            <governor idx="1">maintains</governor>
+            <dependent idx="18">take</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="18">take</governor>
+            <dependent idx="19">place</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="18">take</governor>
+            <dependent idx="21">Kronos</dependent>
+          </dep>
+          <dep type="prep_including">
+            <governor idx="21">Kronos</governor>
+            <dependent idx="23">production</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="23">production</governor>
+            <dependent idx="24">of</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="24">of</governor>
+            <dependent idx="25">about</dependent>
+          </dep>
+          <dep type="number">
+            <governor idx="27">million</governor>
+            <dependent idx="26">5</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="29">meters</governor>
+            <dependent idx="27">million</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="29">meters</governor>
+            <dependent idx="28">cubic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="25">about</governor>
+            <dependent idx="29">meters</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="29">meters</governor>
+            <dependent idx="31">gas</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="25">about</governor>
+            <dependent idx="32">daily</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+    </sentences>
+    <coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>2</sentence>
+          <start>14</start>
+          <end>17</end>
+          <head>15</head>
+          <text>GAStech International 's</text>
+        </mention>
+        <mention>
+          <sentence>1</sentence>
+          <start>20</start>
+          <end>22</end>
+          <head>21</head>
+          <text>GAStech International</text>
+        </mention>
+      </coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>1</sentence>
+          <start>1</start>
+          <end>6</end>
+          <head>5</head>
+          <text>News Online Today GASTECH LEADERSHIP</text>
+        </mention>
+        <mention>
+          <sentence>1</sentence>
+          <start>28</start>
+          <end>31</end>
+          <head>30</head>
+          <text>the GAStech leadership</text>
+        </mention>
+      </coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>1</sentence>
+          <start>11</start>
+          <end>12</end>
+          <head>11</head>
+          <text>Kronos</text>
+        </mention>
+        <mention>
+          <sentence>1</sentence>
+          <start>8</start>
+          <end>10</end>
+          <head>9</head>
+          <text>2014/01/20 ABILA</text>
+        </mention>
+      </coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>2</sentence>
+          <start>5</start>
+          <end>6</end>
+          <head>5</head>
+          <text>Centrum</text>
+        </mention>
+        <mention>
+          <sentence>2</sentence>
+          <start>7</start>
+          <end>11</end>
+          <head>8</head>
+          <text>the capital of Tethys</text>
+        </mention>
+      </coreference>
+    </coreference>
+  </document>
+</root>

@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>News</word>
+            <lemma>News</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>4</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="2">
+            <word>Online</word>
+            <lemma>Online</lemma>
+            <CharacterOffsetBegin>5</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="3">
+            <word>Today</word>
+            <lemma>Today</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>THIS P1D</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t1" type="DATE"/>
+          </token>
+          <token id="4">
+            <word>ELODIS</word>
+            <lemma>ELODIS</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="5">
+            <word>PUBLIC</word>
+            <lemma>PUBLIC</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="6">
+            <word>HEALTH</word>
+            <lemma>HEALTH</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="7">
+            <word>FACT</word>
+            <lemma>FACT</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="8">
+            <word>SHEET</word>
+            <lemma>SHEET</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="9">
+            <word>1998/05/16</word>
+            <lemma>1998/05/16</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>66</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>1998-05-16</NormalizedNER>
+            <Speaker>PER0</Speaker>
+            <Timex tid="t2" type="DATE">1998-05-16</Timex>
+          </token>
+          <token id="10">
+            <word>ELODIS</word>
+            <lemma>ELODIS</lemma>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>76</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="11">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>76</CharacterOffsetBegin>
+            <CharacterOffsetEnd>77</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="12">
+            <word>Kronos</word>
+            <lemma>Kronos</lemma>
+            <CharacterOffsetBegin>78</CharacterOffsetBegin>
+            <CharacterOffsetEnd>84</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="13">
+            <word>-</word>
+            <lemma>-</lemma>
+            <CharacterOffsetBegin>85</CharacterOffsetBegin>
+            <CharacterOffsetEnd>86</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="14">
+            <word>At</word>
+            <lemma>at</lemma>
+            <CharacterOffsetBegin>87</CharacterOffsetBegin>
+            <CharacterOffsetEnd>89</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="15">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>90</CharacterOffsetBegin>
+            <CharacterOffsetEnd>93</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="16">
+            <word>request</word>
+            <lemma>request</lemma>
+            <CharacterOffsetBegin>94</CharacterOffsetBegin>
+            <CharacterOffsetEnd>101</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="17">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>102</CharacterOffsetBegin>
+            <CharacterOffsetEnd>104</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="18">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>105</CharacterOffsetBegin>
+            <CharacterOffsetEnd>108</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="19">
+            <word>citizens</word>
+            <lemma>citizen</lemma>
+            <CharacterOffsetBegin>109</CharacterOffsetBegin>
+            <CharacterOffsetEnd>117</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="20">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>118</CharacterOffsetBegin>
+            <CharacterOffsetEnd>120</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="21">
+            <word>Elodis</word>
+            <lemma>Elodis</lemma>
+            <CharacterOffsetBegin>121</CharacterOffsetBegin>
+            <CharacterOffsetEnd>127</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>LOCATION</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="22">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>127</CharacterOffsetBegin>
+            <CharacterOffsetEnd>128</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="23">
+            <word>Wellness</word>
+            <lemma>Wellness</lemma>
+            <CharacterOffsetBegin>129</CharacterOffsetBegin>
+            <CharacterOffsetEnd>137</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="24">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>138</CharacterOffsetBegin>
+            <CharacterOffsetEnd>141</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="25">
+            <word>All</word>
+            <lemma>all</lemma>
+            <CharacterOffsetBegin>142</CharacterOffsetBegin>
+            <CharacterOffsetEnd>145</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="26">
+            <word>has</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>146</CharacterOffsetBegin>
+            <CharacterOffsetEnd>149</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="27">
+            <word>published</word>
+            <lemma>publish</lemma>
+            <CharacterOffsetBegin>150</CharacterOffsetBegin>
+            <CharacterOffsetEnd>159</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="28">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>160</CharacterOffsetBegin>
+            <CharacterOffsetEnd>161</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="29">
+            <word>report</word>
+            <lemma>report</lemma>
+            <CharacterOffsetBegin>162</CharacterOffsetBegin>
+            <CharacterOffsetEnd>168</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="30">
+            <word>on</word>
+            <lemma>on</lemma>
+            <CharacterOffsetBegin>169</CharacterOffsetBegin>
+            <CharacterOffsetEnd>171</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="31">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>172</CharacterOffsetBegin>
+            <CharacterOffsetEnd>175</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="32">
+            <word>impact</word>
+            <lemma>impact</lemma>
+            <CharacterOffsetBegin>176</CharacterOffsetBegin>
+            <CharacterOffsetEnd>182</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="33">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>183</CharacterOffsetBegin>
+            <CharacterOffsetEnd>185</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="34">
+            <word>gas</word>
+            <lemma>gas</lemma>
+            <CharacterOffsetBegin>186</CharacterOffsetBegin>
+            <CharacterOffsetEnd>189</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="35">
+            <word>drilling</word>
+            <lemma>drilling</lemma>
+            <CharacterOffsetBegin>190</CharacterOffsetBegin>
+            <CharacterOffsetEnd>198</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="36">
+            <word>operations</word>
+            <lemma>operation</lemma>
+            <CharacterOffsetBegin>199</CharacterOffsetBegin>
+            <CharacterOffsetEnd>209</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="37">
+            <word>on</word>
+            <lemma>on</lemma>
+            <CharacterOffsetBegin>210</CharacterOffsetBegin>
+            <CharacterOffsetEnd>212</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="38">
+            <word>water</word>
+            <lemma>water</lemma>
+            <CharacterOffsetBegin>213</CharacterOffsetBegin>
+            <CharacterOffsetEnd>218</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="39">
+            <word>quality</word>
+            <lemma>quality</lemma>
+            <CharacterOffsetBegin>219</CharacterOffsetBegin>
+            <CharacterOffsetEnd>226</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="40">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>227</CharacterOffsetBegin>
+            <CharacterOffsetEnd>230</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="41">
+            <word>public</word>
+            <lemma>public</lemma>
+            <CharacterOffsetBegin>231</CharacterOffsetBegin>
+            <CharacterOffsetEnd>237</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="42">
+            <word>health</word>
+            <lemma>health</lemma>
+            <CharacterOffsetBegin>238</CharacterOffsetBegin>
+            <CharacterOffsetEnd>244</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+          <token id="43">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>244</CharacterOffsetBegin>
+            <CharacterOffsetEnd>245</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+            <Speaker>PER0</Speaker>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (NNP News) (NNP Online) (NNP Today) (NNP ELODIS) (NNP PUBLIC) (NNP HEALTH) (NNP FACT) (NNP SHEET) (CD 1998/05/16) (NNP ELODIS)) (, ,) (X (NP (NNP Kronos)) (: -) (PP (IN At) (NP (NP (DT the) (NN request)) (PP (IN of) (NP (NP (DT the) (NNS citizens)) (PP (IN of) (NP (NP (NNP Elodis) (, ,) (NNP Wellness)) (PP (IN for) (NP (DT All))))))))))) (VP (VBZ has) (VP (VBN published) (NP (NP (DT a) (NN report)) (PP (IN on) (NP (NP (DT the) (NN impact)) (PP (IN of) (NP (NN gas) (NN drilling) (NNS operations)))))) (PP (IN on) (NP (NP (NN water) (NN quality)) (CC and) (NP (JJ public) (NN health)))))) (. .))) </parse>
+        <dependencies type="basic-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="27">published</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="4">ELODIS</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="5">PUBLIC</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="6">HEALTH</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="7">FACT</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="8">SHEET</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="9">1998/05/16</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="27">published</governor>
+            <dependent idx="10">ELODIS</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="12">Kronos</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="12">Kronos</governor>
+            <dependent idx="14">At</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">request</governor>
+            <dependent idx="15">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="14">At</governor>
+            <dependent idx="16">request</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="16">request</governor>
+            <dependent idx="17">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="19">citizens</governor>
+            <dependent idx="18">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="17">of</governor>
+            <dependent idx="19">citizens</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="19">citizens</governor>
+            <dependent idx="20">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="23">Wellness</governor>
+            <dependent idx="21">Elodis</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="20">of</governor>
+            <dependent idx="23">Wellness</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="23">Wellness</governor>
+            <dependent idx="24">for</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="24">for</governor>
+            <dependent idx="25">All</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="27">published</governor>
+            <dependent idx="26">has</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="29">report</governor>
+            <dependent idx="28">a</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="27">published</governor>
+            <dependent idx="29">report</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="29">report</governor>
+            <dependent idx="30">on</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="32">impact</governor>
+            <dependent idx="31">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="30">on</governor>
+            <dependent idx="32">impact</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="32">impact</governor>
+            <dependent idx="33">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="36">operations</governor>
+            <dependent idx="34">gas</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="36">operations</governor>
+            <dependent idx="35">drilling</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="33">of</governor>
+            <dependent idx="36">operations</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="27">published</governor>
+            <dependent idx="37">on</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="39">quality</governor>
+            <dependent idx="38">water</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="37">on</governor>
+            <dependent idx="39">quality</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="39">quality</governor>
+            <dependent idx="40">and</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="42">health</governor>
+            <dependent idx="41">public</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="39">quality</governor>
+            <dependent idx="42">health</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="27">published</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="4">ELODIS</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="5">PUBLIC</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="6">HEALTH</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="7">FACT</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="8">SHEET</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="9">1998/05/16</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="27">published</governor>
+            <dependent idx="10">ELODIS</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="12">Kronos</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">request</governor>
+            <dependent idx="15">the</dependent>
+          </dep>
+          <dep type="prep_at">
+            <governor idx="12">Kronos</governor>
+            <dependent idx="16">request</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="19">citizens</governor>
+            <dependent idx="18">the</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="16">request</governor>
+            <dependent idx="19">citizens</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="23">Wellness</governor>
+            <dependent idx="21">Elodis</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="19">citizens</governor>
+            <dependent idx="23">Wellness</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="23">Wellness</governor>
+            <dependent idx="25">All</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="27">published</governor>
+            <dependent idx="26">has</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="29">report</governor>
+            <dependent idx="28">a</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="27">published</governor>
+            <dependent idx="29">report</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="32">impact</governor>
+            <dependent idx="31">the</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="29">report</governor>
+            <dependent idx="32">impact</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="36">operations</governor>
+            <dependent idx="34">gas</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="36">operations</governor>
+            <dependent idx="35">drilling</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="32">impact</governor>
+            <dependent idx="36">operations</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="39">quality</governor>
+            <dependent idx="38">water</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="27">published</governor>
+            <dependent idx="39">quality</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="42">health</governor>
+            <dependent idx="41">public</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="39">quality</governor>
+            <dependent idx="42">health</dependent>
+          </dep>
+        </dependencies>
+        <dependencies type="collapsed-ccprocessed-dependencies">
+          <dep type="root">
+            <governor idx="0">ROOT</governor>
+            <dependent idx="27">published</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="1">News</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="2">Online</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="3">Today</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="4">ELODIS</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="5">PUBLIC</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="6">HEALTH</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="7">FACT</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="8">SHEET</dependent>
+          </dep>
+          <dep type="num">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="9">1998/05/16</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="27">published</governor>
+            <dependent idx="10">ELODIS</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="10">ELODIS</governor>
+            <dependent idx="12">Kronos</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="16">request</governor>
+            <dependent idx="15">the</dependent>
+          </dep>
+          <dep type="prep_at">
+            <governor idx="12">Kronos</governor>
+            <dependent idx="16">request</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="19">citizens</governor>
+            <dependent idx="18">the</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="16">request</governor>
+            <dependent idx="19">citizens</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="23">Wellness</governor>
+            <dependent idx="21">Elodis</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="19">citizens</governor>
+            <dependent idx="23">Wellness</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="23">Wellness</governor>
+            <dependent idx="25">All</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="27">published</governor>
+            <dependent idx="26">has</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="29">report</governor>
+            <dependent idx="28">a</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="27">published</governor>
+            <dependent idx="29">report</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="32">impact</governor>
+            <dependent idx="31">the</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="29">report</governor>
+            <dependent idx="32">impact</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="36">operations</governor>
+            <dependent idx="34">gas</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="36">operations</governor>
+            <dependent idx="35">drilling</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="32">impact</governor>
+            <dependent idx="36">operations</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="39">quality</governor>
+            <dependent idx="38">water</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="27">published</governor>
+            <dependent idx="39">quality</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="42">health</governor>
+            <dependent idx="41">public</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="27">published</governor>
+            <dependent idx="42">health</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="39">quality</governor>
+            <dependent idx="42">health</dependent>
+          </dep>
+        </dependencies>
+      </sentence>
+    </sentences>
+    <coreference>
+      <coreference>
+        <mention representative="true">
+          <sentence>1</sentence>
+          <start>1</start>
+          <end>11</end>
+          <head>10</head>
+          <text>News Online Today ELODIS PUBLIC HEALTH FACT SHEET 1998/05/16 ELODIS</text>
+        </mention>
+        <mention>
+          <sentence>1</sentence>
+          <start>21</start>
+          <end>22</end>
+          <head>21</head>
+          <text>Elodis</text>
+        </mention>
+      </coreference>
+    </coreference>
+  </document>
+</root>

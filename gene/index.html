@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Genetic visualizations</title>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			margin:0;
+		}
+
+		/* svg static styles */
+		path {
+			stroke:#fff;
+			stroke-width:0.5px;
+		}
+	</style>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+	<div id="controls">
+		<button id="v1">rainbow style</button>
+		<button id="v2">circle style</button>
+		<div id="info">
+			Click one of the buttons to show a visualization
+		</div>
+	</div>
+	<script>
+		var nameMap = {
+				'common ancestor':'CA', // no synteny for this
+				'dog':'canFam2',
+				'human':'hg18',
+				'mouse':'mm8',
+				'rat':'rn3'
+			};
+
+		function Synteny(cnum, len, offset, orient, rid) {
+			/*
+				The aspects of the synteny(?) that we want to track:
+				local chromosone number
+				synteny length
+				start offset
+				orientation (+ or -)
+				id (region number in the ancestor)
+			*/
+			this.cnum = cnum;
+			this.len = len;
+			this.offset = offset;
+			this.orient = orient;
+			this.rid = rid;
+		};
+
+		function Map() {
+			this.hg18 = '';
+			this.rn3 = '';
+			this.mm8 = '';
+			this.canFam2 = '';
+		};
+
+		function parseSynteny(rows) {
+			// data structure to hold the identified synteny
+			// locations per species
+			window.species = {
+				"hg18":[],
+				"rn3":[],
+				"mm8":[],
+				"canFam2":[]
+			};
+
+			// a lookup map for the places where an identified
+			// synteny block can be found
+			window.lookup = [];
+
+			// start at negative one to begin indexing at 0
+			var cachromecount = -1;
+			rows.forEach(function(v,i) {
+				if(v.length > 0) {
+					// each time we come across a '#' then 
+					// we have advanced to the next CA chromosome
+					if(v.substring(0,1) === '#') {
+						cachromecount++;
+
+						// create a new array to hold this chromosome's
+						// identified synteny blocks
+						for(id in window.species) {
+							window.species[id].push([]);
+						}
+					} else {
+						// example row structure:
+						// spec.cnum:start-end orient [rid]
+
+						// species name
+						var species = v.split('.');
+
+						// chromosome number
+						var chrn = species[1].split(':');
+
+						// start and end of the synteny block
+						var bounds = chrn[1].split(' ');
+
+						// the synteny block id -
+						// with direction (+ or -)
+						// reference against the chromosome structures file
+						var rid = bounds[2].slice(1,-1);
+
+						// base pairs from beginning of chromosome
+						var start = bounds[0].split('-');
+						var end = parseInt(start[1]);
+						var beg = parseInt(start[0]);
+
+						// synteny block length in base pairs
+						var len = end - beg;
+
+						// since there are more CA chromosomes than
+						// extant species chromosomes sometimes,
+						// need to be able to handle "chrX" or similar
+						var match = chrn[0].match(/(\d+)/);
+						if(match !== null) {
+							var cn = +match[1];
+						} else {
+							var cn = chrn[0].substring(3);
+						}
+
+						var s = new Synteny(
+								cn,
+								len,
+								beg,
+								bounds[1],
+								+rid
+							);
+
+						window.species[species[0]][cachromecount].push(s);
+
+						window.lookup[+rid] = window.lookup[+rid] || new Map();
+						window.lookup[+rid][species[0]] = cn;
+					}
+				};
+			});
+		};
+
+		function parseStructures(rows) {
+			var refname = '';
+			window.structures = {};
+
+			// get the species
+			// each chromosome
+			// syntenty block by id
+			rows.forEach(function(v) {
+				if(v.length > 0) {
+					if(v.substring(0,1) === '#') {
+						// the structures file is divided by species
+						// and the sections are headed by the common name
+						// for that species. Look it up in the nameMap dictionary
+						var name = v.substring(1);
+						refname = nameMap[name];
+					} else {
+						var fields = v.split(' ');
+						var match = fields[0].match(/(\d+)/);
+
+						// get the chromosone number
+						if(match !== null) {
+							var cn = +match[1];
+						} else {
+							var cn = fields[0].substring(3);
+						}
+
+						// split the remaining part of the row into the 
+						// synteny block ids and direction
+						structures[refname] = structures[refname] || {};
+						structures[refname][cn] = fields[1].slice(0,-1).split(',');
+					}
+				}
+			});
+		};
+
+		function CallbackTest() {
+			this.cars = false;
+			this.structures = false;
+		};
+
+		CallbackTest.prototype.forward = function(which) {
+			this[which] = true;
+
+			if(this.cars && this.structures) {
+				// whatever should be first called here.
+				matsetup();
+			}
+		};
+
+		function cleanup() {
+			// remove elements of the svg
+			// reset it
+			jQuery('svg').remove();
+			svg = d3.select('body').append('svg')
+						.attr('width', width)
+						.attr('height', height)
+					.append('g')
+						.attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ') rotate(-90)');
+		};
+
+		jQuery('window').ready(function() {
+			var cb = new CallbackTest();
+
+			// get the files and parse them
+			jQuery.get('CARs.txt')
+				.done(function(data) {
+					var rows = data.split("\n");
+					parseSynteny(rows);
+					
+					cb.forward('cars');
+				});
+
+			jQuery.get('chromosome_structures.txt')
+				.done(function(data) {
+					var rows = data.split('\n');
+					parseStructures(rows);
+
+					cb.forward('structures');
+				});
+
+			// set up the callbacks for the buttons
+			jQuery('#v1').click(function() {
+				cleanup();
+				draw();
+			});
+
+			jQuery('#v2').click(function() {
+				cleanup();
+				matsetup();
+			})
+		});
+
+
+		///////////////////////////////////////////////////////////////////////
+		// start visualization logic
+
+		// create the bounds for the visualization window
+		var width = jQuery(window).width(),
+			height = jQuery(window).height(),
+			margins = {
+				top:0.05 * height,
+				bottom: 0.05 * height,
+				left:0.05 * width,
+				right:0.05 * width
+			};
+
+		// fix the center of the svg
+		width = width - margins.left - margins.right;
+		height = height - margins.top - margins.bottom;
+
+		// create the svg element
+		var svg = d3.select('body').append('svg')
+						.attr('width', width)
+						.attr('height', height)
+					.append('g')
+						.attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ') rotate(-90)');
+
+		var maxrad = Math.min(((height / 2) * 0.4),((width / 2) * 0.4));
+
+		var arc = d3.svg.arc()
+					.innerRadius(100) // xxx
+					.outerRadius(200) // xxx
+					.startAngle(function() {
+						return lastangle;
+					});
+
+		var chord = d3.layout.chord()
+						.padding(0.05)
+						.sortSubgroups(d3.descending);
+
+		// position it in the center of the window
+		jQuery('svg').css({
+			'margin':margins.top + 'px '
+					+ margins.right + 'px '
+					+ margins.bottom + 'px '
+					+ margins.left + 'px'
+		});
+
+		// a helper function for getting the number of keys in an object
+		Object.size = function(obj) {
+			var size = 0, key;
+			for (key in obj) {
+				if (obj.hasOwnProperty(key)) size++;
+			}
+			return size;
+		};
+
+		// first, lets add the CA structure
+		// as an arc across the bottom of the page
+		// with each chromosome as a segment of the arc.
+		// we want to partition the arc into the chromosome segments
+
+		function draw() {
+			drawCAArc();
+			drawHgArc();
+			drawCanFamArc();
+			drawMMArc();
+			drawRNArc();
+		};
+
+		function matsetup() {
+			// step 1, make the matrix of connections
+			var dobj = structures['CA'], length, key, id;
+			length = Object.size(dobj);
+
+			// assemble the matrix
+			window.matrix = Array(length);
+			for(var i = 0; i < matrix.length; i++) {
+				matrix[i] = Array(length);
+			}
+
+			// initialize it to 0.
+			for(var i = 0; i < matrix.length; i++) {
+				for(var ii = 0; ii < matrix[i].length; ii++) {
+					matrix[i][ii] = 0;
+				}
+			}
+
+			for(key in dobj) {
+				for(var i = 0; i < dobj[key].length; i++) {
+					id = dobj[key][i];
+
+					var other_chromo = lookup[Math.abs(parseInt(id))];
+					var matrow = matrix[+key - 1];
+					if(!(other_chromo['hg18'] in matrow)) {
+						// there is an x and a y chromo on the human.
+						continue;
+					}
+
+					matrix[+key - 1][other_chromo['hg18'] - 1]++;
+				}
+			}
+
+			chord.matrix(matrix);
+
+			svg.selectAll('.group')
+			 		.data(chord.groups)
+			 	.enter().append('path')
+					.style('fill', 'lightgray')
+					.attr('class', 'group')
+					.attr("d", d3.svg.arc().innerRadius(100).outerRadius(200));
+
+			svg.append("g")
+					.attr("class", "chord")
+					.selectAll("path")
+				.data(chord.chords)
+					.enter().append("path")
+					.attr("d", d3.svg.chord().radius(100))
+					.style("fill", 'gray');
+		};
+
+		var lastangle = Math.PI;
+
+		function drawCAArc() {
+			// this function needs to be a callback so that the
+			// data is prepared when executed
+			var dobj = structures['CA'];
+
+			var length = 0, key, individual;
+			for(key in dobj) {
+				length += dobj[key].length;
+			}
+
+			// the arc segment each individual synteny should occupy
+			individual = Math.PI / length;
+
+			arc.endAngle(function(d) {
+					lastangle -= (individual * dobj[d].length);
+					return lastangle;
+				});
+
+			svg = d3.select('svg').append('g')
+					.attr('transform', 'translate(' + width / 2 + ',' + height * 0.8 +') rotate(-90) ');
+
+			svg.selectAll('.ca')
+					.data(Object.keys(dobj))
+				.enter()
+					.append('path')
+					.attr('class', 'ca')
+					.attr('d', arc)
+					.attr('fill', 'lightgray');
+		};
+
+		function drawHgArc() {
+			var dobj = structures['hg18'];
+
+			lastangle = Math.PI;
+
+			var length = 0, key, individual;
+			for(key in dobj) {
+				length += dobj[key].length;
+			}
+
+			individual = Math.PI / length;
+
+			arc.innerRadius(210) // xxx
+				.outerRadius(280)
+				.endAngle(function(d) {
+					lastangle -= (individual * dobj[d].length);
+					return lastangle;
+				});
+
+			svg = d3.select('svg').append('g')
+					.attr('transform', 'translate(' + width / 2 + ',' + height * 0.8 +') rotate(-90) ');
+
+			svg.selectAll('.hg18')
+					.data(Object.keys(dobj))
+				.enter()
+					.append('path')
+					.attr('class', 'hg18')
+					.attr('d', arc)
+					.attr('fill', 'pink');
+		};
+
+		function drawCanFamArc() {
+			var dobj = structures['canFam2'];
+
+			lastangle = Math.PI;
+
+			var length = 0, key, individual;
+			for(key in dobj) {
+				length += dobj[key].length;
+			}
+
+			individual = Math.PI / length;
+
+			arc.innerRadius(290)
+				.outerRadius(340)
+				.endAngle(function(d) {
+					lastangle -= (individual * dobj[d].length);
+					return lastangle;
+				});
+
+			svg = d3.select('svg').append('g')
+					.attr('transform', 'translate(' + width / 2 + ',' + height * 0.8 +') rotate(-90) ');
+
+			svg.selectAll('.canFam2')
+					.data(Object.keys(dobj))
+				.enter()
+					.append('path')
+					.attr('class', 'canFam2')
+					.attr('d', arc)
+					.attr('fill', 'red');
+		};
+
+		function drawMMArc() {
+			var dobj = structures['mm8'];
+
+			lastangle = Math.PI;
+
+			var length = 0, key, individual;
+			for(key in dobj) {
+				length += dobj[key].length;
+			}
+
+			individual = Math.PI / length;
+
+			arc.innerRadius(360) // xxx
+				.outerRadius(400)
+				.endAngle(function(d) {
+					lastangle -= (individual * dobj[d].length);
+					return lastangle;
+				});
+
+			svg = d3.select('svg').append('g')
+					.attr('transform', 'translate(' + width / 2 + ',' + height * 0.8 +') rotate(-90) ');
+
+			svg.selectAll('.mm8')
+					.data(Object.keys(dobj))
+				.enter()
+					.append('path')
+					.attr('class', 'mm8')
+					.attr('d', arc)
+					.attr('fill', 'lightblue');
+		};
+
+		function drawRNArc() {
+			var dobj = structures['rn3'];
+
+			lastangle = Math.PI;
+
+			var length = 0, key, individual;
+			for(key in dobj) {
+				length += dobj[key].length;
+			}
+
+			individual = Math.PI / length;
+
+			arc.innerRadius(410) // xxx
+				.outerRadius(450)
+				.endAngle(function(d) {
+					lastangle -= (individual * dobj[d].length);
+					return lastangle;
+				});
+
+			svg = d3.select('svg').append('g')
+					.attr('transform', 'translate(' + width / 2 + ',' + height * 0.8 +') rotate(-90) ');
+
+			svg.selectAll('.rn3')
+					.data(Object.keys(dobj))
+				.enter()
+					.append('path')
+					.attr('class', 'rn3')
+					.attr('d', arc)
+					.attr('fill', 'blue');
+		};
+	</script>
+</body>
+</html>

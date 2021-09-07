@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		svg {
+			border: 1px solid black;
+			margin:auto;
+			display: block;
+		}
+		html, body {
+			height:100%;
+			overflow-y:hidden;
+			font-family: sans-serif;
+		}
+		body {
+			margin:0;
+		}
+		circle {
+			/*fill:#000;*/
+			stroke-width:1px;
+			stroke:#000;
+		}
+		line {
+			stroke-width:3px;
+			stroke:red;
+		}
+		.elink {
+			stroke:black;
+			stroke-width:1px;
+		}
+		.assistant {
+			stroke:gray;
+		}
+		.subordinate {
+			stroke:lightgray;
+		}
+		div.tooltip {
+			position: absolute;
+			text-align: center;
+			/*width: 60px;*/
+			height: 12px;
+			padding: 8px;
+			font: 10px sans-serif;
+			background: #ddd;
+			border: solid 1px #aaa;
+			border-radius: 8px;
+			pointer-events: none;
+		}
+		.legend {
+			stroke-width:1px;
+			stroke:#000;
+		}
+		#name {
+			font-weight:700;
+		}
+	</style>
+	<script src="../d3/d3.js" charset="utf-8"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var groups = {
+			"executive":{
+				"ceo":{
+					"name":"Sten Sanjorge Jr.",
+					"assistant":"Mat Bramar"
+				},
+				"esa":{
+					"name":"Willem Vasco-Pais"
+				},
+				"cfo":{
+					"name":"Ingrid Barranco",
+					"assistant":"Anda Ribera"
+				},
+				"coo":{
+					"name":"Orhan Strum",
+					"assistant":"Linda Lagos"
+				},
+				"cio":{
+					"name":"Ada Campo-Corrente",
+					"assistant":"Rachel Pantanal"
+				}
+			},
+			"engineering":{
+				"group manager":{
+					"name":"Lidelse Dedos",
+					"assistant":"Ruscella Mies Haber",
+					"subordinates":["Felix Balas","Adra Nubarron","Lars Azada","Birgitta Frente"]
+				},
+				"site manager":{
+					"name":"Marin Onda",
+					"subordinates":["Elsa Orilla","Vira Frente","Isande Borrasca","Gustav Cazar","Axel Calzas","Brand Tempestad","Kare Orilla"]
+				}
+			},
+			"information technology":{
+				"group manager":{
+					"name":"Linnea Bergen",
+					"assistant":"Carla Forluniau",
+					"subordinates":["Isak Baza","Nils Calixto","Sven Flecha","Lucas Alcazar"]
+				}
+			},
+			"security":{
+				"group manager":{
+					"name":"Felix Resumir",
+					"assistant":"Cornelia Lais",
+					"subordinates":["Stenig Fusil","Varja Lagos","Hennie Osvaldo","Loreto Bodrogi","Edvard Vann","Isia Vann","Hideki Cocinaro","Kanon Herrero","Minke Mies","Inga Ferro"]
+				}
+			},
+			"facilities":{
+				"group manager":{
+					"name":"Bertrand Ovan",
+					"subordinates":["Dante Coginian","Benito Hawelon","Valeria Morlun","Irene Nant","Albina Hafon","Varro Awelon","Claudio Hawelon","Adan Morlun","Dylan Scozzese","Cecilia Morluniau","Emile Arpa","Henk Mies"]
+				}
+			}
+		};
+	</script>
+	<script type="text/javascript">
+		var connections = [
+			['Julian', 'Elian', '2012-09-08', 0, 'The Orb', '0.txt'],
+			['Beatriz', 'sanjorge', '2013-12-18', 2, 'The Light of Truth', '1.txt'],
+			['barranco', 'sanjorge', '2013-12-18', 3, 'The Light of Truth', '1.txt'],
+			['barranco', 'beatriz', '2013-12-18', 1, 'The Light of Truth', '1.txt'],
+			['corrente', 'sanjorge', '2013-12-18', 3, 'The Light of Truth', '1.txt'],
+			['corrente', 'beatriz', '2013-12-18', 1, 'The Light of Truth', '1.txt'],
+			['corrente', 'barranco', '2013-12-18', 0, 'The Light of Truth', '1.txt'],
+			['orhan', 'sanjorge', '2013-12-18', 3, 'The Light of Truth', '1.txt'],
+			['orhan', 'beatriz', '2013-12-18', 1, 'The Light of Truth', '1.txt'],
+			['orhan', 'barranco', '2013-12-18', 0, 'The Light of Truth', '1.txt'],
+			['orhan', 'corrente', '2013-12-18', 0, 'The Light of Truth', '1.txt'],
+			['vasco', 'sanjorge', '2013-12-18', 3, 'The Light of Truth', '1.txt'],
+			['vasco', 'beatriz', '2013-12-18', 1, 'The Light of Truth', '1.txt'],
+			['vasco', 'barranco', '2013-12-18', 0, 'The Light of Truth', '1.txt'],
+			['vasco', 'corrente', '2013-12-18', 0, 'The Light of Truth', '1.txt'],
+			['vasco', 'orhan', '2013-12-18', 0, 'The Light of Truth', '1.txt'],
+			['Jeroen', 'elian', '2012-06-21', 2, 'The Wrap', '116.txt'],
+			['Julian', 'elian', '2012-06-21', 3, 'The Wrap', '116.txt'],
+			['Julian', 'jeroen', '2012-06-21', 1, 'The Wrap', '116.txt'],
+			['Henk', 'elian', '2012-06-21', 4, 'The Wrap', '116.txt'],
+			['Henk', 'jeroen', '2012-06-21', 2, 'The Wrap', '116.txt'],
+			['Henk', 'julian', '2012-06-21', 1, 'The Wrap', '116.txt'],
+			['orhan', 'sanjorge', '2014-01-20', 0, 'Tethys News', '122.txt'],
+			['vasco', 'sanjorge', '2014-01-20', 0, 'Tethys News', '122.txt'],
+			['vasco', 'orhan', '2014-01-20', 0, 'Tethys News', '122.txt'],
+			['Julian', 'elian', '2013-06-20', 0, 'Kronos Star', '130.txt'],
+			['Elian', 'julian', '2012-06-20', 1, 'World Source', '132.txt'],
+			['barranco', 'ale', '2014-01-20', 3, 'Athena Speaks', '138.txt'],
+			['corrente', 'ale', '2014-01-20', 3, 'Athena Speaks', '138.txt'],
+			['corrente', 'barranco', '2014-01-20', 0, 'Athena Speaks', '138.txt'],
+			['orhan', 'ale', '2014-01-20', 3, 'Athena Speaks', '138.txt'],
+			['orhan', 'barranco', '2014-01-20', 0, 'Athena Speaks', '138.txt'],
+			['orhan', 'corrente', '2014-01-20', 0, 'Athena Speaks', '138.txt'],
+			['vasco', 'ale', '2014-01-20', 3, 'Athena Speaks', '138.txt'],
+			['vasco', 'barranco', '2014-01-20', 0, 'Athena Speaks', '138.txt'],
+			['vasco', 'corrente', '2014-01-20', 0, 'Athena Speaks', '138.txt'],
+			['vasco', 'orhan', '2014-01-20', 0, 'Athena Speaks', '138.txt'],
+			['Ale', 'sanjorge', '2013-02-24', 0, 'Everyday News', '147.txt'],
+			['Julian', 'elian', '2009-06-23', 4, 'World Journal', '149.txt'],
+			['sanjorge', 'elian', '2009-06-23', 5, 'World Journal', '149.txt'],
+			['sanjorge', 'julian', '2009-06-23', 1, 'World Journal', '149.txt'],
+			['Ale', 'elian', '2009-06-23', 5, 'World Journal', '149.txt'],
+			['Ale', 'julian', '2009-06-23', 1, 'World Journal', '149.txt'],
+			['Ale', 'sanjorge', '2009-06-23', 0, 'World Journal', '149.txt'],
+			['Ale', 'sanjorge', '2013-02-22', 0, 'International Times', '150.txt'],
+			['Henk', 'sanjorge', '1998-03-20', 5, 'All News Today', '154.txt'],
+			['Julian', 'elian', '2009-06-22', 2, 'News Online Today', '155.txt'],
+			['Ale', 'elian', '2009-03-13', 5, 'Daily Pegasus', '157.txt'],
+			['Elian', 'ale', '2011-06-20', 0, 'Homeland Illumination', '161.txt'],
+			['beatriz', 'sanjorge', '2003-05-19', 2, 'The Light of Truth', '164.txt'],
+			['barranco', 'sanjorge', '2014-01-21', 0, 'International Times', '167.txt'],
+			['corrente', 'sanjorge', '2014-01-21', 0, 'International Times', '167.txt'],
+			['corrente', 'barranco', '2014-01-21', 0, 'International Times', '167.txt'],
+			['orhan', 'sanjorge', '2014-01-21', 0, 'International Times', '167.txt'],
+			['orhan', 'barranco', '2014-01-21', 0, 'International Times', '167.txt'],
+			['orhan', 'corrente', '2014-01-21', 0, 'International Times', '167.txt'],
+			['vasco', 'sanjorge', '2014-01-21', 0, 'International Times', '167.txt'],
+			['vasco', 'barranco', '2014-01-21', 0, 'International Times', '167.txt'],
+			['vasco', 'corrente', '2014-01-21', 0, 'International Times', '167.txt'],
+			['vasco', 'orhan', '2014-01-21', 0, 'International Times', '167.txt'],
+			['corrente', 'barranco', '2014-01-20', 0, 'Central Bulletin', '170.txt'],
+			['orhan', 'barranco', '2014-01-20', 0, 'Central Bulletin', '170.txt'],
+			['orhan', 'corrente', '2014-01-20', 0, 'Central Bulletin', '170.txt'],
+			['barranco', 'sanjorge', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['corrente', 'sanjorge', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['corrente', 'barranco', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['orhan', 'sanjorge', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['orhan', 'barranco', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['orhan', 'corrente', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['vasco', 'sanjorge', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['vasco', 'barranco', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['vasco', 'corrente', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['vasco', 'orhan', '2014-01-19', 0, 'Kronos Star', '174.txt'],
+			['Elian', 'ale', '2011-06-21', 0, 'Daily Pegasus', '175.txt'],
+			['Jeroen', 'elian', '2012-06-20', 2, 'Homeland Illumination', '18.txt'],
+			['Julian', 'elian', '2012-06-20', 3, 'Homeland Illumination', '18.txt'],
+			['Julian', 'jeroen', '2012-06-20', 1, 'Homeland Illumination', '18.txt'],
+			['Henk', 'elian', '2012-06-20', 4, 'Homeland Illumination', '18.txt'],
+			['Henk', 'jeroen', '2012-06-20', 2, 'Homeland Illumination', '18.txt'],
+			['Henk', 'julian', '2012-06-20', 1, 'Homeland Illumination', '18.txt'],
+			['Ale', 'carmine', '2007-03-21', 0, 'Daily Pegasus', '182.txt'],
+			['sanjorge', 'henk', '1998-04-26', 18, 'The Wrap', '183.txt'],
+			['Ale', 'henk', '1998-04-26', 21, 'The Wrap', '183.txt'],
+			['Ale', 'sanjorge', '1998-04-26', 3, 'The Wrap', '183.txt'],
+			['Julian', 'elian', '2013-06-22', 0, 'The Guide', '189.txt'],
+			['Elian', 'ale', '2009-03-13', 0, 'News Desk', '19.txt'],
+			['sanjorge', 'ale', '2009-03-13', 2, 'News Desk', '19.txt'],
+			['sanjorge', 'elian', '2009-03-13', 2, 'News Desk', '19.txt'],
+			['Ale', 'sanjorge', '2009-05-15', 0, 'The World', '195.txt'],
+			['Julian', 'elian', '2009-06-21', 0, 'News Online Today', '204.txt'],
+			['Julian', 'elian', '2012-08-23', 1, 'Central Bulletin', '213.txt'],
+			['Jeroen', 'elian', '2012-08-23', 2, 'Central Bulletin', '213.txt'],
+			['Jeroen', 'julian', '2012-08-23', 1, 'Central Bulletin', '213.txt'],
+			['Henk', 'julian', '2009-03-09', 5, 'The Wrap', '217.txt'],
+			['Elian', 'julian', '2009-03-09', 5, 'The Wrap', '217.txt'],
+			['Elian', 'henk', '2009-03-09', 0, 'The Wrap', '217.txt'],
+			['beatriz', 'sanjorge', '2013-12-18', 2, 'The General Post', '223.txt'],
+			['corrente', 'sanjorge', '2013-12-18', 3, 'The General Post', '223.txt'],
+			['corrente', 'beatriz', '2013-12-18', 1, 'The General Post', '223.txt'],
+			['orhan', 'sanjorge', '2013-12-18', 3, 'The General Post', '223.txt'],
+			['orhan', 'beatriz', '2013-12-18', 1, 'The General Post', '223.txt'],
+			['orhan', 'corrente', '2013-12-18', 0, 'The General Post', '223.txt'],
+			['Elian', 'ale', '2011-06-20', 0, 'Homeland Illumination', '225.txt'],
+			['Elian', 'ale', '2009-03-13', 0, 'The Guide', '229.txt'],
+			['Ale', 'sanjorge', '2014-01-20', 0, 'Centrum Sentinel', '232.txt'],
+			['Julian', 'elian', '2009-06-22', 4, 'International Times', '24.txt'],
+			['sanjorge', 'elian', '2009-06-22', 5, 'International Times', '24.txt'],
+			['sanjorge', 'julian', '2009-06-22', 1, 'International Times', '24.txt'],
+			['barranco', 'sanjorge', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['corrente', 'sanjorge', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['corrente', 'barranco', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['orhan', 'sanjorge', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['orhan', 'barranco', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['orhan', 'corrente', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['vasco', 'sanjorge', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['vasco', 'barranco', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['vasco', 'corrente', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['vasco', 'orhan', '2014-01-19', 0, 'The Truth', '240.txt'],
+			['Ale', 'isia', '2007-04-12', 1, 'News Desk', '241.txt'],
+			['barranco', 'sanjorge', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['corrente', 'sanjorge', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['corrente', 'barranco', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['orhan', 'sanjorge', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['orhan', 'barranco', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['orhan', 'corrente', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['vasco', 'sanjorge', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['vasco', 'barranco', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['vasco', 'corrente', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['vasco', 'orhan', '2014-01-21', 0, 'The Continent', '245.txt'],
+			['Julian', 'carmine', '1999-07-09', 1, 'The Orb', '248.txt'],
+			['Elian', 'ale', '2011-06-22', 0, 'The Orb', '249.txt'],
+			['Julian', 'elian', '2009-06-23', 4, 'The Continent', '268.txt'],
+			['sanjorge', 'elian', '2009-06-23', 5, 'The Continent', '268.txt'],
+			['sanjorge', 'julian', '2009-06-23', 1, 'The Continent', '268.txt'],
+			['Ale', 'elian', '2009-06-21', 1, 'Daily Pegasus', '269.txt'],
+			['Julian', 'elian', '2009-06-21', 5, 'Daily Pegasus', '269.txt'],
+			['Julian', 'ale', '2009-06-21', 4, 'Daily Pegasus', '269.txt'],
+			['Carmine', 'julian', '2001-08-30', 1, 'Kronos Star', '273.txt'],
+			['Elian', 'julian', '2012-06-20', 2, 'International Times', '282.txt'],
+			['Ale', 'elian', '2009-03-12', 5, 'Homeland Illumination', '294.txt'],
+			['Julian', 'elian', '2012-08-24', 3, 'The Explainer', '300.txt'],
+			['Jeroen', 'elian', '2012-08-24', 4, 'The Explainer', '300.txt'],
+			['Jeroen', 'julian', '2012-08-24', 1, 'The Explainer', '300.txt'],
+			['Ale', 'sanjorge', '2013-02-22', 0, 'News Online Today', '303.txt'],
+			['Elian', 'ale', '2009-06-21', 0, 'Worldwise', '309.txt'],
+			['Henk', 'sanjorge', '1998-03-21', 5, 'Daily Pegasus', '317.txt'],
+			['Elian', 'julian', '2012-06-21', 2, 'The Continent', '318.txt'],
+			['Carmine', 'julian', '2001-09-01', 1, 'The Guide', '328.txt'],
+			['Julian', 'elian', '2012-09-07', 0, 'Homeland Illumination', '33.txt'],
+			['Elian', 'julian', '2012-06-21', 2, 'Everyday News', '343.txt'],
+			['Elian', 'julian', '2012-06-21', 2, 'World Journal', '351.txt'],
+			['Julian', 'elian', '2009-06-22', 4, 'World Source', '353.txt'],
+			['sanjorge', 'elian', '2009-06-22', 5, 'World Source', '353.txt'],
+			['sanjorge', 'julian', '2009-06-22', 1, 'World Source', '353.txt'],
+			['Ale', 'elian', '2009-06-21', 1, 'The Orb', '357.txt'],
+			['Julian', 'elian', '2009-06-21', 5, 'The Orb', '357.txt'],
+			['Julian', 'ale', '2009-06-21', 4, 'The Orb', '357.txt'],
+			['Julian', 'ale', '2009-02-23', 13, 'The Continent', '36.txt'],
+			['beatriz', 'sanjorge', '2013-12-17', 2, 'The Tulip', '360.txt'],
+			['barranco', 'sanjorge', '2013-12-17', 3, 'The Tulip', '360.txt'],
+			['barranco', 'beatriz', '2013-12-17', 1, 'The Tulip', '360.txt'],
+			['corrente', 'sanjorge', '2013-12-17', 3, 'The Tulip', '360.txt'],
+			['corrente', 'beatriz', '2013-12-17', 1, 'The Tulip', '360.txt'],
+			['corrente', 'barranco', '2013-12-17', 0, 'The Tulip', '360.txt'],
+			['orhan', 'sanjorge', '2013-12-17', 3, 'The Tulip', '360.txt'],
+			['orhan', 'beatriz', '2013-12-17', 1, 'The Tulip', '360.txt'],
+			['orhan', 'barranco', '2013-12-17', 0, 'The Tulip', '360.txt'],
+			['orhan', 'corrente', '2013-12-17', 0, 'The Tulip', '360.txt'],
+			['vasco', 'sanjorge', '2013-12-17', 3, 'The Tulip', '360.txt'],
+			['vasco', 'beatriz', '2013-12-17', 1, 'The Tulip', '360.txt'],
+			['vasco', 'barranco', '2013-12-17', 0, 'The Tulip', '360.txt'],
+			['vasco', 'corrente', '2013-12-17', 0, 'The Tulip', '360.txt'],
+			['vasco', 'orhan', '2013-12-17', 0, 'The Tulip', '360.txt'],
+			['Julian', 'elian', '2013-06-20', 0, 'International News', '374.txt'],
+			['barranco', 'sanjorge', '2013-12-17', 2, 'Who What News', '375.txt'],
+			['corrente', 'sanjorge', '2013-12-17', 2, 'Who What News', '375.txt'],
+			['corrente', 'barranco', '2013-12-17', 0, 'Who What News', '375.txt'],
+			['orhan', 'sanjorge', '2013-12-17', 2, 'Who What News', '375.txt'],
+			['orhan', 'barranco', '2013-12-17', 0, 'Who What News', '375.txt'],
+			['orhan', 'corrente', '2013-12-17', 0, 'Who What News', '375.txt'],
+			['Ale', 'isia', '2007-04-11', 1, 'The Explainer', '377.txt'],
+			['Carmine', 'isia', '2007-04-11', 2, 'The Explainer', '377.txt'],
+			['Carmine', 'ale', '2007-04-11', 1, 'The Explainer', '377.txt'],
+			['Julian', 'elian', '2009-06-23', 4, 'Everyday News', '387.txt'],
+			['sanjorge', 'elian', '2009-06-23', 5, 'Everyday News', '387.txt'],
+			['sanjorge', 'julian', '2009-06-23', 1, 'Everyday News', '387.txt'],
+			['Ale', 'elian', '2009-06-23', 5, 'Everyday News', '387.txt'],
+			['Ale', 'julian', '2009-06-23', 1, 'Everyday News', '387.txt'],
+			['Ale', 'sanjorge', '2009-06-23', 0, 'Everyday News', '387.txt'],
+			['Ale', 'carmine', '2007-03-22', 0, 'The Orb', '390.txt'],
+			['Ale', 'sanjorge', '2013-02-22', 0, 'World Source', '393.txt'],
+			['Julian', 'elian', '2013-06-21', 0, 'The Truth', '394.txt'],
+			['barranco', 'sanjorge', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['corrente', 'sanjorge', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['corrente', 'barranco', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['orhan', 'sanjorge', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['orhan', 'barranco', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['orhan', 'corrente', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['vasco', 'sanjorge', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['vasco', 'barranco', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['vasco', 'corrente', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['vasco', 'orhan', '2014-01-21', 0, 'World Journal', '396.txt'],
+			['Elian', 'ale', '2009-03-12', 0, 'The Abila Post', '398.txt'],
+			['sanjorge', 'ale', '2009-03-12', 2, 'The Abila Post', '398.txt'],
+			['sanjorge', 'elian', '2009-03-12', 2, 'The Abila Post', '398.txt'],
+			['corrente', 'barranco', '2014-01-19', 0, 'News Online Today', '40.txt'],
+			['orhan', 'barranco', '2014-01-19', 0, 'News Online Today', '40.txt'],
+			['orhan', 'corrente', '2014-01-19', 0, 'News Online Today', '40.txt'],
+			['vasco', 'barranco', '2014-01-19', 0, 'News Online Today', '40.txt'],
+			['vasco', 'corrente', '2014-01-19', 0, 'News Online Today', '40.txt'],
+			['vasco', 'orhan', '2014-01-19', 0, 'News Online Today', '40.txt'],
+			['barranco', 'sanjorge', '2014-01-19', 0, 'International News', '436.txt'],
+			['corrente', 'sanjorge', '2014-01-19', 0, 'International News', '436.txt'],
+			['corrente', 'barranco', '2014-01-19', 0, 'International News', '436.txt'],
+			['orhan', 'sanjorge', '2014-01-19', 0, 'International News', '436.txt'],
+			['orhan', 'barranco', '2014-01-19', 0, 'International News', '436.txt'],
+			['orhan', 'corrente', '2014-01-19', 0, 'International News', '436.txt'],
+			['vasco', 'sanjorge', '2014-01-19', 0, 'International News', '436.txt'],
+			['vasco', 'barranco', '2014-01-19', 0, 'International News', '436.txt'],
+			['vasco', 'corrente', '2014-01-19', 0, 'International News', '436.txt'],
+			['vasco', 'orhan', '2014-01-19', 0, 'International News', '436.txt'],
+			['Ale', 'elian', '2009-03-12', 5, 'Homeland Illumination', '437.txt'],
+			['Ale', 'elian', '2009-06-20', 1, 'The Wrap', '445.txt'],
+			['Julian', 'elian', '2009-06-20', 5, 'The Wrap', '445.txt'],
+			['Julian', 'ale', '2009-06-20', 4, 'The Wrap', '445.txt'],
+			['Julian', 'henk', '2009-03-08', 0, 'News Online Today', '447.txt'],
+			['Henk', 'sanjorge', '1998-03-21', 5, 'The Wrap', '448.txt'],
+			['Elian', 'ale', '2009-03-12', 0, 'News Online Today', '451.txt'],
+			['Silvia', 'elian', '2009-06-21', 0, 'News Online Today', '454.txt'],
+			['Ale', 'elian', '2009-03-14', 5, 'The Orb', '455.txt'],
+			['corrente', 'sanjorge', '2014-01-21', 0, 'Everyday News', '460.txt'],
+			['orhan', 'sanjorge', '2014-01-21', 0, 'Everyday News', '460.txt'],
+			['orhan', 'corrente', '2014-01-21', 0, 'Everyday News', '460.txt'],
+			['Julian', 'carmine', '1999-07-07', 1, 'Homeland Illumination', '468.txt'],
+			['Ale', 'isia', '2007-04-11', 1, 'Athena Speaks', '48.txt'],
+			['Carmine', 'isia', '2007-04-11', 2, 'Athena Speaks', '48.txt'],
+			['Carmine', 'ale', '2007-04-11', 1, 'Athena Speaks', '48.txt'],
+			['Julian', 'carmine', '1999-07-08', 1, 'Daily Pegasus', '482.txt'],
+			['beatriz', 'sanjorge', '2003-05-19', 3, 'The General Post', '493.txt'],
+			['Ale', 'sanjorge', '1984-05-05', 9, 'Everyday News', '496.txt'],
+			['sanjorge', 'henk', '1998-04-25', 18, 'Homeland Illumination', '502.txt'],
+			['Elian', 'ale', '2009-03-13', 0, 'News Online Today', '505.txt'],
+			['Julian', 'elian', '2010-06-20', 0, 'Kronos Star', '508.txt'],
+			['Henk', 'julian', '2009-03-09', 5, 'Daily Pegasus', '51.txt'],
+			['Ale', 'julian', '2009-03-09', 5, 'Daily Pegasus', '51.txt'],
+			['Ale', 'henk', '2009-03-09', 0, 'Daily Pegasus', '51.txt'],
+			['Elian', 'julian', '2009-03-09', 5, 'Daily Pegasus', '51.txt'],
+			['Elian', 'henk', '2009-03-09', 0, 'Daily Pegasus', '51.txt'],
+			['Elian', 'ale', '2009-03-09', 0, 'Daily Pegasus', '51.txt'],
+			['Julian', 'elian', '2012-09-08', 0, 'The Wrap', '520.txt'],
+			['barranco', 'sanjorge', '2014-01-20', 1, 'News Desk', '525.txt'],
+			['corrente', 'sanjorge', '2014-01-20', 1, 'News Desk', '525.txt'],
+			['corrente', 'barranco', '2014-01-20', 0, 'News Desk', '525.txt'],
+			['orhan', 'sanjorge', '2014-01-20', 1, 'News Desk', '525.txt'],
+			['orhan', 'barranco', '2014-01-20', 0, 'News Desk', '525.txt'],
+			['orhan', 'corrente', '2014-01-20', 0, 'News Desk', '525.txt'],
+			['vasco', 'sanjorge', '2014-01-20', 1, 'News Desk', '525.txt'],
+			['vasco', 'barranco', '2014-01-20', 0, 'News Desk', '525.txt'],
+			['vasco', 'corrente', '2014-01-20', 0, 'News Desk', '525.txt'],
+			['vasco', 'orhan', '2014-01-20', 0, 'News Desk', '525.txt'],
+			['Henk', 'sanjorge', '1998-03-20', 5, 'The Orb', '531.txt'],
+			['Julian', 'elian', '2013-06-22', 0, 'Worldwise', '538.txt'],
+			['Julian', 'elian', '2012-08-22', 3, 'The Abila Post', '54.txt'],
+			['Jeroen', 'elian', '2012-08-22', 4, 'The Abila Post', '54.txt'],
+			['Jeroen', 'julian', '2012-08-22', 1, 'The Abila Post', '54.txt'],
+			['Julian', 'elian', '2012-09-07', 0, 'Daily Pegasus', '55.txt'],
+			['Julian', 'elian', '2009-06-20', 1, 'All News Today', '554.txt'],
+			['beatriz', 'sanjorge', '2013-12-16', 2, 'The World', '559.txt'],
+			['barranco', 'sanjorge', '2013-12-16', 3, 'The World', '559.txt'],
+			['barranco', 'beatriz', '2013-12-16', 1, 'The World', '559.txt'],
+			['corrente', 'sanjorge', '2013-12-16', 3, 'The World', '559.txt'],
+			['corrente', 'beatriz', '2013-12-16', 1, 'The World', '559.txt'],
+			['corrente', 'barranco', '2013-12-16', 0, 'The World', '559.txt'],
+			['orhan', 'sanjorge', '2013-12-16', 3, 'The World', '559.txt'],
+			['orhan', 'beatriz', '2013-12-16', 1, 'The World', '559.txt'],
+			['orhan', 'barranco', '2013-12-16', 0, 'The World', '559.txt'],
+			['orhan', 'corrente', '2013-12-16', 0, 'The World', '559.txt'],
+			['vasco', 'sanjorge', '2013-12-16', 3, 'The World', '559.txt'],
+			['vasco', 'beatriz', '2013-12-16', 1, 'The World', '559.txt'],
+			['vasco', 'barranco', '2013-12-16', 0, 'The World', '559.txt'],
+			['vasco', 'corrente', '2013-12-16', 0, 'The World', '559.txt'],
+			['vasco', 'orhan', '2013-12-16', 0, 'The World', '559.txt'],
+			['Elian', 'ale', '2009-03-14', 0, 'The Truth', '561.txt'],
+			['sanjorge', 'ale', '1984-05-03', 2, 'World Source', '564.txt'],
+			['barranco', 'sanjorge', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['corrente', 'sanjorge', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['corrente', 'barranco', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['orhan', 'sanjorge', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['orhan', 'barranco', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['orhan', 'corrente', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['vasco', 'sanjorge', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['vasco', 'barranco', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['vasco', 'corrente', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['vasco', 'orhan', '2014-01-20', 0, 'Kronos Star', '569.txt'],
+			['Jeroen', 'elian', '2012-06-22', 2, 'Daily Pegasus', '572.txt'],
+			['Julian', 'elian', '2012-06-22', 3, 'Daily Pegasus', '572.txt'],
+			['Julian', 'jeroen', '2012-06-22', 1, 'Daily Pegasus', '572.txt'],
+			['Henk', 'elian', '2012-06-22', 4, 'Daily Pegasus', '572.txt'],
+			['Henk', 'jeroen', '2012-06-22', 2, 'Daily Pegasus', '572.txt'],
+			['Henk', 'julian', '2012-06-22', 1, 'Daily Pegasus', '572.txt'],
+			['Ale', 'isia', '2007-04-11', 1, 'Central Bulletin', '578.txt'],
+			['Carmine', 'isia', '2007-04-11', 2, 'Central Bulletin', '578.txt'],
+			['Carmine', 'ale', '2007-04-11', 1, 'Central Bulletin', '578.txt'],
+			['Ale', 'sanjorge', '2013-02-24', 0, 'The Continent', '580.txt'],
+			['Julian', 'elian', '2010-06-22', 0, 'The Truth', '581.txt'],
+			['beatriz', 'sanjorge', '2003-05-17', 2, 'The World', '587.txt'],
+			['barranco', 'sanjorge', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['corrente', 'sanjorge', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['corrente', 'barranco', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['orhan', 'sanjorge', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['orhan', 'barranco', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['orhan', 'corrente', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['vasco', 'sanjorge', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['vasco', 'barranco', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['vasco', 'corrente', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['vasco', 'orhan', '2014-01-19', 0, 'Worldwise', '589.txt'],
+			['beatriz', 'sanjorge', '2003-05-18', 2, 'Who What News', '59.txt'],
+			['Carmine', 'julian', '2001-09-01', 1, 'Worldwise', '593.txt'],
+			['corrente', 'sanjorge', '2014-01-19', 0, 'The Guide', '614.txt'],
+			['orhan', 'sanjorge', '2014-01-19', 0, 'The Guide', '614.txt'],
+			['orhan', 'corrente', '2014-01-19', 0, 'The Guide', '614.txt'],
+			['Julian', 'elian', '2010-06-22', 0, 'Worldwise', '620.txt'],
+			['sanjorge', 'henk', '1998-04-27', 18, 'Daily Pegasus', '647.txt'],
+			['Ale', 'sanjorge', '2013-02-24', 0, 'World Journal', '648.txt'],
+			['Jeroen', 'elian', '2012-06-22', 2, 'The Orb', '662.txt'],
+			['Julian', 'elian', '2012-06-22', 3, 'The Orb', '662.txt'],
+			['Julian', 'jeroen', '2012-06-22', 1, 'The Orb', '662.txt'],
+			['Henk', 'elian', '2012-06-22', 4, 'The Orb', '662.txt'],
+			['Henk', 'jeroen', '2012-06-22', 2, 'The Orb', '662.txt'],
+			['Henk', 'julian', '2012-06-22', 1, 'The Orb', '662.txt'],
+			['Elian', 'ale', '2009-03-13', 0, 'The Explainer', '667.txt'],
+			['sanjorge', 'ale', '2009-03-13', 2, 'The Explainer', '667.txt'],
+			['sanjorge', 'elian', '2009-03-13', 2, 'The Explainer', '667.txt'],
+			['Julian', 'elian', '2010-06-22', 0, 'The Guide', '670.txt'],
+			['corrente', 'sanjorge', '2014-01-20', 1, 'The Explainer', '679.txt'],
+			['orhan', 'sanjorge', '2014-01-20', 1, 'The Explainer', '679.txt'],
+			['orhan', 'corrente', '2014-01-20', 0, 'The Explainer', '679.txt'],
+			['Ale', 'carmine', '2007-03-20', 0, 'Homeland Illumination', '684.txt'],
+			['Beatriz', 'sanjorge', '2003-05-19', 2, 'The Tulip', '686.txt'],
+			['Henk', 'sanjorge', '1998-03-19', 5, 'Homeland Illumination', '69.txt'],
+			['Jeroen', 'elian', '2012-06-20', 2, 'All News Today', '698.txt'],
+			['Henk', 'elian', '2012-06-20', 3, 'All News Today', '698.txt'],
+			['Henk', 'jeroen', '2012-06-20', 1, 'All News Today', '698.txt'],
+			['Julian', 'elian', '2012-08-23', 3, 'News Desk', '709.txt'],
+			['Jeroen', 'elian', '2012-08-23', 4, 'News Desk', '709.txt'],
+			['Jeroen', 'julian', '2012-08-23', 1, 'News Desk', '709.txt'],
+			['sanjorge', 'ale', '2014-01-20', 1, 'The Tulip', '712.txt'],
+			['barranco', 'sanjorge', '2014-01-20', 1, 'The Abila Post', '713.txt'],
+			['corrente', 'sanjorge', '2014-01-20', 1, 'The Abila Post', '713.txt'],
+			['corrente', 'barranco', '2014-01-20', 0, 'The Abila Post', '713.txt'],
+			['orhan', 'sanjorge', '2014-01-20', 1, 'The Abila Post', '713.txt'],
+			['orhan', 'barranco', '2014-01-20', 0, 'The Abila Post', '713.txt'],
+			['orhan', 'corrente', '2014-01-20', 0, 'The Abila Post', '713.txt'],
+			['vasco', 'sanjorge', '2014-01-20', 1, 'The Abila Post', '713.txt'],
+			['vasco', 'barranco', '2014-01-20', 0, 'The Abila Post', '713.txt'],
+			['vasco', 'corrente', '2014-01-20', 0, 'The Abila Post', '713.txt'],
+			['vasco', 'orhan', '2014-01-20', 0, 'The Abila Post', '713.txt'],
+			['Ale', 'sanjorge', '2014-01-20', 0, 'Tethys News', '726.txt'],
+			['Ale', 'elian', '2009-06-19', 1, 'Homeland Illumination', '73.txt'],
+			['Julian', 'elian', '2009-06-19', 5, 'Homeland Illumination', '73.txt'],
+			['Julian', 'ale', '2009-06-19', 4, 'Homeland Illumination', '73.txt'],
+			['Henk', 'julian', '2009-03-09', 5, 'The Orb', '735.txt'],
+			['Elian', 'julian', '2009-03-09', 5, 'The Orb', '735.txt'],
+			['Elian', 'henk', '2009-03-09', 0, 'The Orb', '735.txt'],
+			['Jeroen', 'julian', '2012-08-24', 1, 'Athena Speaks', '74.txt'],
+			['sanjorge', 'henk', '1998-04-27', 18, 'The Orb', '741.txt'],
+			['Henk', 'julian', '2009-03-07', 5, 'Homeland Illumination', '743.txt'],
+			['Elian', 'julian', '2009-03-07', 5, 'Homeland Illumination', '743.txt'],
+			['Elian', 'henk', '2009-03-07', 0, 'Homeland Illumination', '743.txt'],
+			['Ale', 'sanjorge', '1984-05-03', 3, 'International Times', '751.txt'],
+			['Julian', 'elian', '2012-09-08', 0, 'All News Today', '753.txt'],
+			['Ale', 'isia', '2007-04-10', 1, 'The Abila Post', '756.txt'],
+			['Carmine', 'isia', '2007-04-10', 2, 'The Abila Post', '756.txt'],
+			['Carmine', 'ale', '2007-04-10', 1, 'The Abila Post', '756.txt'],
+			['Julian', 'elian', '2010-06-21', 0, 'International News', '767.txt'],
+			['Ale', 'sanjorge', '1984-05-04', 10, 'World Journal', '771.txt'],
+			['sanjorge', 'ale', '1984-05-05', 2, 'The Continent', '784.txt'],
+			['barranco', 'sanjorge', '2014-01-21', 0, 'World Source', '787.txt'],
+			['corrente', 'sanjorge', '2014-01-21', 0, 'World Source', '787.txt'],
+			['corrente', 'barranco', '2014-01-21', 0, 'World Source', '787.txt'],
+			['orhan', 'sanjorge', '2014-01-21', 0, 'World Source', '787.txt'],
+			['orhan', 'barranco', '2014-01-21', 0, 'World Source', '787.txt'],
+			['orhan', 'corrente', '2014-01-21', 0, 'World Source', '787.txt'],
+			['vasco', 'sanjorge', '2014-01-21', 0, 'World Source', '787.txt'],
+			['vasco', 'barranco', '2014-01-21', 0, 'World Source', '787.txt'],
+			['vasco', 'corrente', '2014-01-21', 0, 'World Source', '787.txt'],
+			['vasco', 'orhan', '2014-01-21', 0, 'World Source', '787.txt'],
+			['Ale', 'elian', '2009-03-13', 5, 'The Wrap', '788.txt'],
+			['Ale', 'sanjorge', '1982-10-03', 3, 'The Continent', '796.txt'],
+			['Elian', 'ale', '2009-03-13', 0, 'Central Bulletin', '798.txt'],
+			['Elian', 'ale', '2011-06-22', 0, 'The Wrap', '799.txt'],
+			['Ale', 'sanjorge', '2009-05-16', 0, 'The Tulip', '810.txt'],
+			['Elian', 'ale', '2009-03-13', 0, 'Worldwise', '815.txt'],
+			['Elian', 'ale', '2009-03-12', 0, 'Kronos Star', '820.txt'],
+			['Ale', 'sanjorge', '2009-05-17', 0, 'The General Post', '826.txt'],
+			['orhan', 'sanjorge', '2014-01-20', 0, 'Modern Rubicon', '827.txt'],
+			['vasco', 'sanjorge', '2014-01-20', 0, 'Modern Rubicon', '827.txt'],
+			['vasco', 'orhan', '2014-01-20', 0, 'Modern Rubicon', '827.txt'],
+			['barranco', 'sanjorge', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['corrente', 'sanjorge', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['corrente', 'barranco', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['orhan', 'sanjorge', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['orhan', 'barranco', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['orhan', 'corrente', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['vasco', 'sanjorge', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['vasco', 'barranco', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['vasco', 'corrente', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['vasco', 'orhan', '2014-01-20', 0, 'The Abila Post', '834.txt'],
+			['Elian', 'ale', '2009-03-12', 0, 'International News', '836.txt'],
+			['Ale', 'Silvia', '2012-11-12', 2, 'The Wrap', '843.txt'],
+			['barranco', 'sanjorge', '2013-12-16', 0, 'News Online Today', '86.txt'],
+			['corrente', 'sanjorge', '2013-12-16', 0, 'News Online Today', '86.txt'],
+			['corrente', 'barranco', '2013-12-16', 0, 'News Online Today', '86.txt'],
+			['orhan', 'sanjorge', '2013-12-16', 0, 'News Online Today', '86.txt'],
+			['orhan', 'barranco', '2013-12-16', 0, 'News Online Today', '86.txt'],
+			['orhan', 'corrente', '2013-12-16', 0, 'News Online Today', '86.txt']
+		];
+	</script>
+</head>
+<body>
+	<div style="margin:10px 0 0 15px;">
+<!--
+	<button onclick="doe();">
+		Show Emails
+	</button>
+-->
+	<p>
+	This visualization was the final project for my Information Interfaces class. The visualization shows the departmental organization of GAStech, a fictional corporation. The button visualizes the connections between employees and individuals mentioned in a series of 800 news articles, which our team processed using NLP. <a href="http://vacommunity.org/VAST+Challenge+2014">More Information</a>
+	</p>
+	
+	<button onclick="doa();">
+		Show Article connections
+	</button>
+</div>
+
+<script type="text/javascript">
+	// $(window).ready(function() {
+function doe() {
+	d3.csv('email headers.csv', callback);
+}
+
+function doa() {
+	connect();
+}
+
+		console.log('keep making progress!');
+
+		var width = $('body').width() - (0.05 * $('body').width()),
+			height = $('body').height() - (0.05 * $('body').height());
+
+		var padding = {
+			top:10,
+			right:15,
+			bottom:10,
+			left:15
+		};
+
+		var svg = d3.select('body').append('svg')
+					.attr('width', width)
+					.attr('height', height);
+
+		var force = d3.layout.force()
+						.size([width, height])
+						.gravity(0) // needed for no center gravity.
+						// .charge(-60)
+						.linkDistance(60)
+						.linkStrength(0.1)
+						.on("tick", tick);
+		
+		var nodes = force.nodes(),
+			links = force.links(),
+			linksel = svg.selectAll(".link"),
+			nodesel = svg.selectAll(".node");
+
+		var x = d3.scale.linear()
+					.domain([0,100])
+					.range([padding.left,(width - padding.right)]);
+
+		var y = d3.scale.linear()
+					.domain([0,100])
+					.range([padding.top,(height - padding.bottom)]);
+
+		var foci = [
+			{x:x(50),y:y(30)},
+			{x:x(30),y:y(40)},
+			{x:x(70),y:y(40)},
+			{x:x(30),y:y(70)},
+			{x:x(70),y:y(70)},
+			{x:x(50),y:y(50)}
+		];
+
+		var pallette = ['#BD0026','#F03B20','#FD8D3C','#FECC5C','#FFFFB2'];
+
+		var colors = d3.scale.ordinal()
+						.domain(Object.keys(groups))
+						.range(pallette);
+
+		var leadernames = ['ceo','group manager'];
+
+		var formatDate = d3.time.format("%x %H:%M").parse;
+
+		function Person(name) {
+			this.name = name;
+		}
+
+		var nodediff = 0,
+			edgediff = 0;
+
+		function tick(e) {
+				if(nodediff != 0 || edgediff != 0) {
+					force.start();
+					edgediff = nodediff = 0;
+				}
+				var k = 0.1 * e.alpha;
+
+				// if(stillcentering) {
+					nodes.forEach(function(o) {
+						// if(o.center !== null) {
+							o.y += (foci[o.center].y - o.y) * k;
+							o.x += (foci[o.center].x - o.x) * k;
+						// } else {
+						// 	o.y += ((height / 2) - o.y) * k;
+						// 	o.x += ((width / 2) - o.x) * k;
+						// }
+					});
+				// }
+
+				nodesel.attr("cx", function(d) {return d.x;})
+					.attr("cy", function(d) {return d.y;});
+
+				linksel.attr("x1", function(d) { return d.source.x; })
+					.attr("y1", function(d) { return d.source.y; })
+					.attr("x2", function(d) { return d.target.x; })
+					.attr("y2", function(d) { return d.target.y; });
+		};
+
+		function fuzz() {
+			var offsetwindow = 20;
+			var rand = d3.random.normal();
+			nodes.forEach(function(d) {
+				if(!('px' in d)) {
+					d.x = +foci[d.center].x + (offsetwindow * rand());
+					d.y = +foci[d.center].y + (offsetwindow * rand());
+				}
+			});
+		}
+
+		function group() {
+			var focuscount = 0;
+
+			for(group in groups) {
+				for(position in groups[group]) {
+					var classname = group.split(' ').join('_');
+					var title = ' ' + position.split(' ').join('_');
+
+					var p = new Person(groups[group][position].name);
+					p.center = focuscount;
+					p.classname = classname + title;
+					p.group = group;
+
+					if(leadernames.indexOf(position) != -1) {
+						p.classname = classname + title + ' honcho';
+						p.type = 'honcho';
+					}
+
+					nodes.push(p);
+
+					if('assistant' in groups[group][position]) {
+						var a = new Person(groups[group][position].assistant);
+						a.classname = classname + title + ' assitant';
+						a.center = focuscount;
+						a.group = group;
+						a.type = 'assistant';
+						nodes.push(a);
+
+						links.push({source:a, target:p, type:'assistant'});
+					}
+
+					if('subordinates' in groups[group][position]) {
+						var subs = groups[group][position].subordinates;
+						for (var i = subs.length - 1; i >= 0; i--) {
+							var u = new Person(subs[i]);
+							u.center = focuscount;
+							u.classname = classname;
+							u.group = group;
+							nodes.push(u);
+
+							links.push({source:p, target:u, type:'subordinate'});
+						};
+					}
+				}
+
+				focuscount++;
+			}
+
+			fuzz();
+			drawnew();
+		};
+
+		function drawnew() {
+			nodesel = nodesel.data(nodes);
+			linksel = linksel.data(links);
+
+			nodesel.enter()
+				.append('circle')
+				.attr('class', function(d) {return d.classname + ' node';})
+				.style('fill', function(d) {
+					if(d.group != null) {
+						return colors(d.group);
+					}
+					return '#FFF';
+				})
+				.attr("cx",function(d) {return d.x;})
+				.attr("cy",function(d) {return d.y;})
+				.attr('r', function(d) {
+					switch(d.type) { 
+						case 'honcho': return 8; 
+						// case 'assistant': return 5; 
+						default: return 6;
+				}})
+				.on('mouseover',createpopup)
+				.on('mouseout',clearpopup)
+				.call(force.drag);
+
+			linksel.enter()
+				.insert('line','circle')
+				.attr('class',function(d) {
+					var c = 'link';
+					if('type' in d) {
+						c += ' ' + d.type;
+					}
+					return c;
+				})
+				.style('stroke-opacity',function(d) {
+					if('weight' in d) {
+						return d.weight / 800.0;
+					} else
+						return 1;
+				})
+				.on('click',function(d){
+					if('articles' in d)
+						articleFilter(d.articles);
+				});
+
+			force.start();
+		};
+
+		function articleFilter(s) {
+			// console.log(s);
+		}
+
+		// go forward with the first renders, the org chart.
+		$('svg').css({'margin-top': Math.round(0.025 * $('body').height())});
+		
+		group();
+
+		///////////////////////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////////////////////
+		// the above code is correct - don't trust what's below here.
+		///////////////////////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////////////////////
+
+		// control to select: email or articles.
+
+		var div = d3.select('body').append('div')
+					.attr('class','tooltip')
+					.style('opacity',1e-6);
+
+		var legend = svg.append('rect')
+						.style('fill','#fff')
+						.attr('width',300)
+						.attr('height',150);
+
+		svg.insert('text','.legend')
+				.attr('x',30)
+				.attr('y',20)
+				.attr("font-family", "sans-serif")
+				.attr("font-size", "20px")
+				.text("Legend");
+
+		for (var i = 0; i < pallette.length; i++) {
+			var f = ['Executive','Engineering','Information Technology','Security','Facilities'][i];
+			svg.insert('rect','.legend')
+				.attr('width',20)
+				.attr('height',20)
+				.attr('title',f)
+				.attr('class','legend')
+				.style('fill',pallette[i])
+				.attr('transform','translate(' + ((i+1) * 30)  + ',30)')
+				.on('mouseover',function(d){
+					legendpop(this.getAttribute('title'));
+				})
+				.on('mouseout',clearpopup);
+		};
+
+		svg.insert('rect','.legend')
+				.attr('width',20)
+				.attr('height',20)
+				.attr('class','legend')
+				.style('fill','#fff')
+				.attr('transform','translate(' + ((i+1) * 30)  + ',30)')
+				.on('mouseover',function(){legendpop('Unknown');})
+				.on('mouseout',clearpopup);
+
+		svg.insert('line','.legend')
+				.style('stroke-width',3)
+				.style('stroke','gray')
+				.attr('x1', 30)
+				.attr('y1', 60)
+				.attr('x2', 80)
+				.attr('y2', 60)
+				.on('mouseover',function(){legendpop('Administrative Assistant Relationship');})
+				.on('mouseout',clearpopup);
+
+		svg.insert('line','.legend')
+				.style('stroke-width',3)
+				.style('stroke','lightgray')
+				.attr('x1', 90)
+				.attr('y1', 60)
+				.attr('x2', 140)
+				.attr('y2', 60)
+				.on('mouseover',function(){legendpop('Subordinate Relationship');})
+				.on('mouseout',clearpopup);
+
+		svg.insert('line','.legend')
+				.style('stroke-width',3)
+				.style('stroke','red')
+				.attr('x1', 150)
+				.attr('y1', 60)
+				.attr('x2', 200)
+				.attr('y2', 60)
+				.on('mouseover',function(){legendpop('Relationship determined algorithmically');})
+				.on('mouseout',clearpopup);
+
+		svg.insert('circle','.legend')
+				.attr('cx',54)
+				.attr('cy',80)
+				// .style('fill',)
+				.style('stroke-width',0)
+				.attr('r',8)
+				.on('mouseover',function(){legendpop('Head of department');})
+				.on('mouseout',clearpopup);
+
+		svg.insert('circle','.legend')
+				.attr('cx',113)
+				.attr('cy',80)
+				// .style('fill',)
+				.style('stroke-width',0)
+				.attr('r',6)
+				.on('mouseover',function(){legendpop('Regular employee');})
+				.on('mouseout',clearpopup);
+
+
+		// svg.insert('rect','.legend')
+		// 	.attr('width')
+		// 	.attr('height')
+		// 	.attr('transform')
+		// 	.
+
+
+
+		function namestring(d) {
+			return "<span id='name'>" + d.name + "</span>";
+		}
+
+		function createpopup(d) {
+			div.html(namestring(d))
+				.style("left", (d3.event.pageX + 10) + "px")
+      			.style("top", (d3.event.pageY - 12) + "px");
+
+			div.transition()
+				.duration(250)
+				.style('opacity',1);
+		}
+
+		function legendpop(m) {
+			div.text(m)
+				.style("left", (d3.event.pageX + 10) + "px")
+      			.style("top", (d3.event.pageY - 12) + "px");
+
+			div.transition()
+				.duration(250)
+				.style('opacity',1);
+		}
+
+		function clearpopup(d) {
+			div.transition()
+				.duration(200)
+				.style('opacity',1e-6);
+		}
+ 
+		function connect() {
+			// loop through the loops
+			// add nodes that don't yet exist
+			// make connections based on the line diff
+			// and number of times.
+
+			force.stop();
+
+			for(var i = connections.length - 1; i >= 0; i--) {
+				var index = namesearch(connections[i][0]),
+					index2 = namesearch(connections[i][1]);
+
+				if(index === false) {
+					index = nodes.push(addp(connections[i][0])) - 1;
+				}
+
+				if(index2 === false) {
+					index2 = nodes.push(addp(connections[i][1])) - 1;
+				}
+
+				var key1 = index + '-' + index2;
+				if(key1 in lookup2) {
+					links[lookup2[key1]].weight += (20 - connections[i][3]);
+					links[lookup2[key1]].articles.push(connections[i][5]);
+				} else {
+					var key2 = index2 + '-' + index;
+					if(key2 in lookup2) {
+						links[lookup2[key2]].weight += (20 - connections[i][3]);
+						links[lookup2[key2]].articles.push(connections[i][5]);
+					} else {
+						var idx = links.push({
+							source:nodes[index],
+							target:nodes[index2],
+							weight:(20 - connections[i][3]),
+							articles:[connections[i][5]]
+						}) - 1;
+						lookup2[key1] = idx; 
+					}
+				}
+			};
+
+			fuzz();
+			drawnew();
+		};
+
+		function namesearch(name) {
+			// look through the nodes and see if the name is in there.
+			name = name.toLowerCase();
+			for (var i = 0; i < nodes.length; i++) {
+				if(nodes[i].name.toLowerCase().indexOf(name) != -1) {
+					return i;
+				}
+			};
+			return false;
+		}
+
+		var lookup = {};
+		window.emails = [];
+
+
+		function callback(error, data) {
+			var firstemail = formatDate(data[0].Date);
+
+			data.forEach(function(v) {
+				var recipients = v.To.split(", ");
+
+				if(!(v.From in lookup)) {
+					// var flag = true;
+					var sender = nameFromEmail(v.From);
+					for (var i = nodes.length - 1; i >= 0; i--) {
+						if(sender == nodes[i].name) {
+							lookup[v.From] = i;
+							// flag = false;
+							break;
+						}
+					};
+
+					// if(flag) {
+					// 	// the node wasn't there!
+					// 	var p = addp(sender);
+					// 	nodes.push(p);
+					// 	drawnew();
+					// 	lookup[v.From] = nodes.indexOf(p);
+					// };
+				}
+
+				v.From = nodes[lookup[v.From]];
+				v.To = [];
+				v.Date = formatDate(v.Date);
+				v.mins = (v.Date - firstemail) / 60000;
+
+				nodediff = 1;
+
+				for (var i = recipients.length - 1; i >= 0; i--) {
+					if(!(recipients[i] in lookup)) {
+						var owner = nameFromEmail(recipients[i]);
+						for (var ii = nodes.length - 1; ii >= 0; ii--) {
+							if(owner == nodes[ii].name) {
+								lookup[recipients[i]] = ii;
+								break;
+							}
+						};
+					}
+					v.To.push(nodes[lookup[recipients[i]]]);
+				};
+
+				window.emails.push(v);
+			});
+
+			setInterval(emailloop,timestep);
+		}
+
+		// Second force for the email links
+		var f2 = d3.layout.force()
+					.size([width, height])
+					.gravity(0) // needed for no center gravity.
+					.friction(0)
+					.charge(0)
+					.linkStrength(0)
+					.on("tick", tick2);
+					// ;
+
+
+
+		f2.nodes(nodes);
+		var f2links = f2.links();
+		var f2linksel = svg.selectAll(".elink");
+
+		function tick2() {
+			f2linksel.attr("x1", function(d) { return d.source.x; })
+				.attr("y1", function(d) { return d.source.y; })
+				.attr("x2", function(d) { return d.target.x; })
+				.attr("y2", function(d) { return d.target.y; });
+		};
+
+		
+
+		function addp(name) {
+			var ppp = new Person(name);
+			ppp.type = 'unknown';
+			ppp.group = null;
+			ppp.classname = 'unknown';
+			ppp.center = 5;
+			ppp.x = width / 2;
+			ppp.y = height / 2;
+			return ppp;
+		}
+
+		
+
+		function nameFromEmail(email) {
+			var front = email.split('@')[0];
+			var name = front.split('.').join(' ');
+
+			if(front == "Sten.Sanjorge Jr.") {
+				name = "Sten Sanjorge Jr.";
+			}
+
+			// if(email.split('.').pop() == "tethys") {
+			// 	name += " (tethys)";
+			// }
+			
+			return name;
+		};
+
+		
+
+		// function disablegravity() {
+		// 	// force = d3.layout.force().friction(0.0001).gravity(0).charge(0);
+		// 	// ease = 0;
+		// 	nodes.forEach(function(d) {
+		// 		d.fixed = true;
+		// 	});
+		// }
+
+
+		var timecount = 0;
+		var indexptr = 0;
+		var timestep = 50;
+
+		var lookup2 = {};
+		var lookup3 = {};
+
+		function emailloop() {
+			
+			force.stop();
+
+			for (var i = indexptr; i < window.emails.length; i++) {
+				if(window.emails[i].mins <= timecount) {
+					// add a new link.
+					var email = window.emails[i];
+					for (var ii = email.To.length - 1; ii >= 0; ii--) {
+
+						
+						var key = email.From.name + email.To[ii].name;
+						if(!(key in lookup3)) {
+	
+							lookup3[key] = f2links.push({
+								source:email.From,
+								target:email.To[ii],
+								type:'email',
+								weight:0.9
+							}) - 1;
+						} else {
+							var w = f2links[lookup3[key]].weight;
+							f2links[lookup3[key]].weight = w * w;
+						}						
+
+					};
+				} else {
+					indexptr = i;
+					break;
+				}
+			};
+
+			timecount += timestep;
+			f2linksel = f2linksel.data(f2links);
+			f2linksel.enter()
+			.insert('line','circle')
+			.attr('class','elink')
+			.style('stroke-opacity',function(d) {
+				if(d.target.group == d.source.group)
+					return d.weight * 0.3;
+				return d.weight;
+			})
+			.style('stroke-width','0.5px');
+
+			f2.start();
+		};
+
+		
+		// setTimeout(function() {
+			
+		// 	
+		// 	// force.start();
+		// 	setTimeout(function() {
+		// 		// force.stop();
+		// 		f2.nodes(nodes);
+		// 		f2.nodes().forEach(function(d) {
+
+		// 		});
+		// 		force.stop();
+		// 		setTimeout(emailloop,timestep);
+		// 		f2.start();
+		// 	},1500);
+		// 	// setTimeout(function() {
+		// 	// 	// disablegravity()
+				// setInterval(emailloop,timestep);
+		// 	// },1000);
+		// },500);
+
+
+
+	// });
+</script>
+</body>
+</html>

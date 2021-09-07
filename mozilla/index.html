@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inline style test</title>
+</head>
+<body>
+	<style type="text/css">
+		h1 {
+			color: red;
+		}
+		h1 span {
+			color: blue;
+		}
+	</style>
+	<h1><span id="only">Inspect me!</span></h1>
+	<!--
+When you inspect the h1 element, in the developer console, you'll see a list of
+the styles declared on that element. In this case, there are three. Each block
+has a link to the declaration of that style, and when clicked, that link should
+take you to the styles panel of the dev console. In some browsers, the link
+takes you to the wrong style declaration, and in some cases, the actual
+declaration is not scrolled in view.
+	--> 
+	<style type="text/css">
+		h1 span#only {
+			color:black;
+		}
+	</style>
+</body>
+</html>

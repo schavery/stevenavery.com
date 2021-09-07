@@ -1,0 +1,24 @@
+<html>
+<body>
+<script>
+var letters = 'acdfgilmnoprstuw';
+var answer = 292681030017238;
+var attempt = 'aaaaaaaaaa';
+var counter = 0;
+
+function hash(input) {
+	var output = 7;
+	for(var i = 0; i < input.length; i++) {
+		output = output * 23 + letters.indexOf(input[i]); 
+	}
+	return output;
+}
+
+
+while(answer != hash(attempt)) {
+	
+}
+
+</script>
+</body>
+</html>

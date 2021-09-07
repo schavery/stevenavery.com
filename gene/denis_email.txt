@@ -1,0 +1,53 @@
+Date: Tue, 27 May 2014 17:02:22 +0100
+Message-ID: <CACG5r2bjuMxQYD-jf6ustJ__OdKREHagxznOUJiHciVd+fNA4A@mail.gmail.com>
+Subject: Re: Visualization project
+From: Denis Larkin <dmlarkin@gmail.com>
+To: Isaac Liao <isaacliao@gmail.com>, Kwan-Liu Ma <ma@cs.ucdavis.edu>, 
+	Chris Bryan <this.is.cjb@gmail.com>, so choi <sosoi@ucdavis.edu>
+Cc: Harris A Lewin <lewin@ucdavis.edu>
+
+Hi All,
+
+Took me a bit loner that expected. Sorry. 
+
+Attached are two files.
+
+File one: CARs.txt:
+
+This file shows the reconstruction of ancestral chromosome intervals (CARs, #1... #29) that were putatively present in human (encoded as "hg18"), mouse (mm8), rat (rn3), and dog (CanFam2) putative common ancestor. Each CAR contains coordinates of synteny fragments shown in the coordinates of each descendent genome, e.g.:
+
+#1
+hg18.chr1:835227-10376280 + [1]
+...
+hg18.chr1:247042053-247179757 + [98]
+
+
+mm8.chr4:148013883-155029701 - [1]
+....
+mm8.chr11:58122386-58179990 - [98]
+etc.
+
+This example shows you coordinates of synteny blocks in the human or mouse chromosomes and [order] of synteny blocks in in ancestral chromosomes (APCFs). Signs indicate the orientation of these synteny intervals in the decedent genomes (human, mouse, rat, dog).
+
+Next file, chromosome_structures.txt shows the order and orientation of synteny fragments in the ancestral genome #common_ancestor and the same species as in the previous file.
+Each line corresponds to one chromosome, e.g.:
+
+APCF1 +1,+2,+3,+4,+5,+6,+7,+8,+9,+10,+11,+12,+13,+14,+15,+16,+17,+18,+19,+20,+21,+22,+23,+24,+25,+26,+27,+28,+29,+30,+31,+32,+33,+34,+35,+36,+37,+38,+39,+40,+41,+42,+43,+44,+45,+46,+47,+48,+49,+50,+51,+53,+52,+54,+55,+56,+57,+58,+59,+60,+61,+62,+63,+64,+65,+66,+67,+68,+69,+71,+70,+72,+73,+74,+75,+76,+77,+78,+79,+80,+81,+82,+83,+84,+85,+86,+87,+88,+89,+94,+93,+92,+91,+90,+95,+96,+97,+98,
+
+Shows the order of syntenic fragments 1-98 in the ancestral chromosome (APCF) 1.
+
+If you look into the human genome you will see that most of the fragments are found in human chromosome 1:
+
+chr1 +1,+2,+3,+4,+5,+6,+7,+8,+9,+10,+11,+12,+13,+14,+15,+16,+17,+18,+19,+20,+21,+22,+23,+24,+25,+26,+27,+28,+29,+30,+31,+32,+33,+34,+35,+36,+37,+38,+39,+40,+41,+42,+43,+44,+45,+46,+47,+48,+49,+50,-51,-52,+53,+54,+55,+56,+57,+58,+59,+60,+61,+62,+63,+64,+65,+66,+67,+68,+69,-70,-71,+72,+73,+74,+75,+76,+77,+78,+79,+80,-81,+82,+83,+84,+85,+86,+87,+88,+89,-90,-91,-92,-93,-94,+95,+96,+97,
+
+However some of the fragments will have different orientation ("-" sign) than in the ancestral chromosome. E.g., "-51,-52" would indicate an inversion of the interval containing these two fragments in the human genome compared to the ancestral chromosome. 
+
+You can also see that some ancestral chromosomes could be merged in the human genome, e.g., APCF2 and APCF3 form human chromosome 2 or split to multiple human chromosomes.
+
+So if we provide you this information, would it be possible to visualize dynamically how changes from ancestral genomes lead to formation of genomes of different species?
+
+I'm sure you might have a lot of questions about these files and data, so please ask.
+
+Best wishes,
+
+Denis

@@ -1,0 +1,4 @@
+news = ['All News Today', 'The Explainer', 'Athena Speaks', 'Tethys News', 'The General Post', 'Daily Pegasus', 'Central Bulletin', 'Modern Rubicon', ' ', 'Who What News', 'The Wrap', 'The Orb', 'World Source', 'World Journal', 'The Light of Truth', 'The Guide', 'International News', 'The Tulip', 'Kronos Star', 'News Desk', 'The Continent', 'Worldwise', 'The Abila Post', 'News Online Today', 'Homeland Illumination', 'The Truth', 'The World', 'Centrum Sentinel', 'Everyday News', 'International Times']
+for n in news:
+	print('<label for="' + n + '">' + n + '</label>')
+	print('<input type="checkbox" value="' + n + '" id="' + n + '">')
