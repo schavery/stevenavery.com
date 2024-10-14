@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Clipboard paste</title>
+</head>
+<body>
+<label>Test the input:<input id="myInput" type="text" value=""></label>
+<script>
+    window.onload = () => {
+        const myInput = document.getElementById('myInput');
+        myInput.onpaste = e => e.preventDefault();
+    }
+</script>
+
+</body>
+</html>

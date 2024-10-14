@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metric Time</title>
+    <style>
+        #analogClock {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .hand {
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform-origin: bottom;
+        }
+
+        #analogFirstHand {
+            width: 6px;
+            height: 40px;
+            background-color: black;
+        }
+
+        #analogSecondHand {
+            width: 4px;
+            height: 60px;
+            background-color: black;
+        }
+
+        #analogThirdHand {
+            width: 2px;
+            height: 70px;
+            background-color: red;
+        }
+
+        .analogLabel {
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #label
+    </style>
+</head>
+<body>
+
+<div id="analogClock">
+    <div class="hand" id="analogFirstHand"></div>
+    <div class="hand" id="analogSecondHand"></div>
+    <div class="hand" id="analogThirdHand"></div>
+</div>
+<div>
+    <b><span id="metricClock">0.0.000</span></b>
+</div>
+
+
+<script>
+    let standardClockEl = document.getElementById("standardClock"),
+        metricClockEl = document.getElementById("metricClock"),
+        firstHand = document.getElementById("analogFirstHand"),
+        secondHand = document.getElementById("analogSecondHand"),
+        thirdHand = document.getElementById("analogThirdHand");
+
+    function updateStandardClock() {
+        let d = new Date();
+        standardClockEl.textContent = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+    }
+
+    // setInterval(updateStandardClock, 100);
+
+    function getMetricTime(dt) {
+        // we need to use milliseconds because we need to update the clock
+        // in units smaller than seconds
+        let millisecondsPerDay = 24 * 60 * 60 * 1000,
+            millisecondsElapsedToday = ((dt.getHours() * 60 * 60 * 1000) + (dt.getMinutes() * 60 * 1000) + dt.getSeconds() * 1000) + dt.getMilliseconds();
+
+        // hours / 'firsts' divide the day into 10 equal chunks of 8460 seconds
+        let firsts = Math.floor((millisecondsElapsedToday * 10) / millisecondsPerDay),
+            firstsRemainder = (millisecondsElapsedToday * 10) % millisecondsPerDay;
+
+        // minutes (called seconds because its the second division of the day)
+        // divide each hour into ten equal chunks of 864 traditional seconds, or 1000 thirds.
+        let seconds = Math.floor(firstsRemainder * 10 / millisecondsPerDay),
+            secondsRemainder = firstsRemainder * 10 % millisecondsPerDay;
+
+        // 'thirds' or seconds` (prime), take the final remainder from 864 seconds and
+        // resize the division to have 1000 ticks per minute
+        let thirdsSizeFactor = 0.864,
+            thirds = secondsRemainder / thirdsSizeFactor; // TODO it should be divide?
+
+        return {
+            "firsts": firsts,
+            "seconds": seconds,
+            "thirds": thirds
+        }
+    }
+
+    function updateMetricClock() {
+        let metricTimeObj = getMetricTime(new Date()),
+            firsts = metricTimeObj['firsts'].toString(),
+            seconds = metricTimeObj['seconds'].toString(),
+            thirds = metricTimeObj['thirds'].toString().padStart(2, '0').slice(0, 3);
+
+        metricClockEl.textContent = `${firsts}.${seconds}.${thirds}`
+    }
+
+    setInterval(updateMetricClock, 25);
+
+    function renderAnalogClock() {
+        // TODO add time mode, standard or metric?
+        let metricTimeObj = getMetricTime(new Date());
+
+        const thirdsDegrees = (metricTimeObj['thirds'] / 1000) * 360;
+        const secondsDegrees = (metricTimeObj['seconds'] / 10) * 360; // TODO, check
+        const firstsDegrees = (metricTimeObj['firsts'] / 10) * 360; //+ (minutes / 60) * 30; // TODO
+
+        thirdHand.style.transform = `rotate(${thirdsDegrees}deg)`;
+        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+        firstHand.style.transform = `rotate(${firstsDegrees}deg)`;
+    }
+
+    function renderAnalogLabels() {
+        // create label elements
+    }
+
+    setInterval(renderAnalogClock, 50);
+
+</script>
+</body>
+</html>
