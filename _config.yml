@@ -1,0 +1,9 @@
+# GitHub Pages builds this site with Jekyll, which excludes dot-directories
+# (like .well-known/) from the build by default — that's why
+# /.well-known/webfinger returned 404. Explicitly include it so the files
+# are copied into the published site verbatim.
+#
+# NOTE: GitHub Pages only reads a _config.yml at the repository root.
+# blog/_config.yml is NOT used by the root build.
+include:
+  - .well-known
